@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잇플_컨텐츠1</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="icon" href="./img/logo_2.png">
+</head>
+
+<body>
+       <header id="header">
+                <div class="logo">
+                    <a href="../../index.html"><img src="./img/logo.png" alt="로고"></a>
+                </div>
+    </header>
+    <section id="content1">
+        <div class="container">
+            <section class="content1">
+                <h2 class="h2">음식 카테고리</h2>
+                <ul class="category box">
+                    <li><a href="#" data-category="all">전체</a></li>
+                    <li><a href="#" data-category="한식">한식</a></li>
+                    <li><a href="#" data-category="중식">중식</a></li>
+                    <li><a href="#" data-category="일식">일식</a></li>
+                    <li><a href="#" data-category="양식">양식</a></li>
+                    <li><a href="#" data-category="기타">기타</a></li>
+                </ul>
+            </section>
+        </div>
+    </section>
+
+    <section id="content2">
+        <div class="container">
+            <section class="content2">
+                <h2 class="h2">상황 선택</h2>
+                <ul class="who box">
+                    <li><a href="#" data-situation="all">전체</a></li>
+                    <li><a href="#" data-situation="아이동반">아이동반</a></li>
+                    <li><a href="#" data-situation="혼밥">혼밥</a></li>
+                    <li><a href="#" data-situation="반려견 동반">반려견 동반</a></li>
+                    <li><a href="#" data-situation="데이트">데이트</a></li>
+                    <li><a href="#" data-situation="회식">회식</a></li>
+                    <li><a href="#" data-situation="가족 모임">가족 모임</a></li>
+                    <li><a href="#" data-situation="친구 모임">친구 모임</a></li>
+                    <li><a href="#" data-situation="노키즈존">노키즈존</a></li>
+                </ul>
+            </section>
+        </div>
+    </section>
+
+    <section id="content3">
+        <div class="container">
+            <section class="content3">
+                <div class="result-count">총 <span id="result-number">12</span>개의 맛집을 찾았어요!</div>
+                <ul class="order box">
+                    <li><a href="#" data-sort="default">전체</a></li>
+                    <li><a href="#" data-sort="distance">거리순</a></li>
+                    <li><a href="#" data-sort="rating">평점순</a></li>
+                    <li><a href="#" data-sort="review">리뷰순</a></li>
+                </ul>
+            </section>
+        </div>
+    </section>
+
+    <section id="content4">
+        <div class="container">
+            <div class="content4">
+            <div class="restaurant-grid content4" id="restaurant-grid">
+            </div>
+            <div class="no-results" id="no-results" style="display: none;">
+                선택하신 조건에 맞는 맛집이 없습니다. 다른 조건을 선택해보세요.
+            </div>
+        </div>
+        </div>
+    </section>
+     <footer id="footer" >
+    <div class="container">
+      <div class="footer clearfix">
+      <div class="f_logo">
+        <img src="./img/logo.png" alt="로고이미지">
+      </div>
+      <div class="f_asid">
+        <div class="f_menu">
+          <ul>
+            <li><a href="javascript:;">이용약관</a></li>
+            <li><a href="javascript:;">개인정보방침</a></li>
+            <li><a href="javascript:;">사이트맵</a></li>
+          </ul>
+        </div>
+        <div class="f_cont">
+          <span>상호:잇플컴퍼니</span>
+          <span>대표이사:추강현</span>
+          <span>개인정보관리책임자:허윤아</span><br>
+          <span>문의: eatple@gmail.com</span>
+          <span>사업자번호: 123-45-6789</span>
+          <span>통신판매업신고번호: 2025-서울강서-01124호</span><br>
+          <span>서울특별시 강서구 화곡로 149 삼당빌딩 3~5층</span>
+        </div>
+        <div class="f_copy">
+          <span> COPYRIGHT 2025 eatple Inc</span>
+          <span> All Rights Reserved</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+    <script>
+// //메인 연동
+document.addEventListener('DOMContentLoaded', () => {
+    // URL 파라미터에서 값을 가져오는 함수
+    function getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // URL에서 category와 situations 파라미터 가져오기
+    const category = getUrlParameter('category');
+    const situationsParam = getUrlParameter('situations');
+    
+    // 다중 상황을 배열로 변환
+    const situations = situationsParam ? situationsParam.split(',') : [];
+    
+    console.log('받은 파라미터 - category:', category, 'situations:', situations);
+
+        //맛집 영역
+        const restaurants = [
+            {
+                name: "강남 교자",
+                category: "한식",
+                image: "./img/con1_1.png",
+                description: "명동교자에서 일했던 조리장이 강남에 오픈한 칼국수 전문점. 담백한 칼국수와 만두가 제공됩니다. 푸근한 국물에 말아내는 부드러운 칼국수 면이 일품입니다.",
+                rating: 4.6,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 0.5,
+                reviewCount: 150
+            },
+            {
+                name: "갓덴 스시",
+                category: "일식",
+                image: "./img/con1_4.png",
+                description: "본점이 일본에 있는 스시전문점 갓덴스시 한국직영점. 일본 셰프가 직접 한국으로 와 근무하고 있으며, 일본인 손님도 많이 찾는다고 합니다.",
+                rating: 4.9,
+                situations: ["회식"],
+                features: ["바 테이블", "예약가능"],
+                distance: 1.2,
+                reviewCount: 200
+            },
+            {
+                name: "바비 레드",
+                category: "양식",
+                image: "./img/con1_3.png",
+                description: "매운 갈비 파스타의 원조집. 퓨전 레스토랑으로 한식과 이탈리안의 독특한 만남. 좋은 분위기 속에서 이색적인 퓨전 음식을 즐길 수 있어 남녀노소 불문하고 인기인 맛집입니다.",
+                rating: 4.7,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["개별,단체룸", "예약가능"],
+                distance: 0.8,
+                reviewCount: 180
+            },
+            {
+                name: "중화원",
+                category: "중식",
+                image: "./img/con1_4.png",
+                description: "배달 안 되는 중국집임에도 항상 손님들이 많이 찾는곳으로 가격도 저렴한 편입니다. 3/4인분 해물누룽지탕이 대표 메뉴입니다.",
+                rating: 4.5,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "예약가능"],
+                distance: 0.3,
+                reviewCount: 120
+            },
+            {
+                name: "파이브가이즈",
+                category: "기타",
+                image: "./img/con1_5.png",
+                description: "미국의 3대 유명버거 파이브가이즈가 드디어 강남에 상륙했습니다. 현지의 맛을 제대로 느낄수 있는 곳으로 햄버거. 모든 토핑이 무료임으로 취향에 맞게 골라서 드실수 있으니 참고하시기 바랍니다.",
+                rating: 4.6,
+                situations: ["데이트"],
+                features: ["웨이팅석", "예약불가"],
+                distance: 1.0,
+                reviewCount: 250
+            },
+            {
+                name: "로컬 코너",
+                category: "기타",
+                image: "./img/con1_6.png",
+                description: "달콤한 디저트와 커피가 다양하게 마련되어 있는 카페, 로컬코너의 2호점이다. 바나나크럼블과 블루베리크럼블이 시그니처 디저트로, 세트로 주문하면 아이스크림을 곁들일 수 있다.",
+                rating: 4.8,
+                situations: ["데이트"],
+                features: ["포장", "예약가능"],
+                distance: 0.7,
+                reviewCount: 90
+            },
+            {
+                name: "눈꽃떡송이",
+                category: "기타",
+                image: "./img/con1_7.png",
+                description: "분식, 곱창, 빙수를 함께 즐길 수 있는 곳. 여름철엔 얼음 위에 다양한 토핑을 올린 빙수가 인기며, 간단한 식사로 분식류와 곱창 등을 골라도 좋다.",
+                rating: 4.6,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 1.5,
+                reviewCount: 110
+            },
+            {
+                name: "금산삼계탕",
+                category: "한식",
+                image: "./img/con1_8.png",
+                description: "40년 가까이 삼계탕과 고디탕을 선보이는 곳. 얼음 위에서 하룻밤 숙성시킨 영계를 사용해 육질이 부드럽다. 상황삼계탕, 전복삼계탕 등 삼계탕의 종류도 다양한 편이다.",
+                rating: 5.0,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.0,
+                reviewCount: 300
+            },
+            {
+                name: "제로컴플렉스",
+                category: "기타",
+                image: "./img/con1_9.png",
+                description: "네오비스트로를 표방하는 곳으로, 이충후 셰프의 크리에이티브한 프렌치 코스를 맛볼 수 있다. 미니멀한 인테리어에, 허브와 특수 채소를 많이 사용하여 아름다운 플레이팅을 만드는 것이 특징이다.",
+                rating: 4.7,
+                situations: ["친구 모임"],
+                features: ["발레파킹", "예약가능"],
+                distance: 1.8,
+                reviewCount: 80
+            },
+            {
+                name: "꾸아",
+                category: "기타",
+                image: "./img/con1_10.png",
+                description: "왕갈비쌀국수와 반쎄오가 인기 있는 베트남 음식점. 왕갈비쌀국수에는 갈빗대가 통째로 들어간다. 다낭 현지 방식으로 제대로 만든 반쎄오, 비장탄으로 구워낸 분짜도 추천.",
+                rating: 4.5,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["단체이용", "포장"],
+                distance: 1.3,
+                reviewCount: 160
+            },
+            {
+                name: "마마리다이닝",
+                category: "한식",
+                image: "./img/con1_11.png",
+                description: "밍글스 강민구 셰프와 마마리마켓 송하슬람 셰프가 오픈한 한식 다이닝 레스토랑. 한식에 기반을 두어 캐주얼한 양식을 함께 선보인다. 제철회덮밥반상과 마마폴리탄파스타가 시그니처 메뉴다.",
+                rating: 4.7,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.2,
+                reviewCount: 140
+            },
+            {
+                name: "스케치테이블성수",
+                category: "기타",
+                image: "./img/con1_12.png",
+                description: "다채로운 이탈리아 요리와 독특한 샐러드를 선보이는 스케치테이블의 성수점. 새우 내장으로 풍미를 더한 새우비스크파스타가 대표 메뉴.",
+                rating: 5.0,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 2.5,
+                reviewCount: 220
+            },
+            {
+                name: "정인 면옥",
+                category: "기타",
+                image: "./img/con1_13.png",
+                description: "신세대 평양냉면의 선두주자, 평양냉면 마니아 사이에서 큰 호평을 받고 있다. 까칠하게 입에 감기는 메밀 면과 잡미가 없이 맑고 깨끗한 육수가 인상적이다.",
+                rating: 4.8,
+                situations: ["혼밥"],
+                features: ["1인석", "주차가능"],
+                distance: 1.5,
+                reviewCount: 180
+            },
+            {
+                name: "낙원의 소바",
+                category: "일식",
+                image: "./img/con1_14.png",
+                description: "전주식 소바와 생레몬이 들어간 레몬 소바를 맛볼 수 있는 메밀국수 전문점.  나베 전골 우동과 가쓰오부시로 맛을 낸 고기 온소바도 추천하는 메뉴.",
+                rating: 4.6,
+                situations: ["혼밥"],
+                features: ["연중무휴", "주차불가"],
+                distance: 3.5,
+                reviewCount: 160
+            },
+            {
+                name: "산동만두",
+                category: "중식",
+                image: "./img/con1_15.png",
+                description: "중국식 고기만둣집. 보들보들한 만두피 안에 소가 꽉 차있다. 만두뿐 아니라 공갈빵, 중국호떡 등도 맛볼 수 있다.",
+                rating: 4.7,
+                situations: ["노키즈존"],
+                features: ["아침식사", "좁은 내부"],
+                distance: 1.6,
+                reviewCount: 300
+            },
+            {
+                name: "경몽루",
+                category: "중식",
+                image: "./img/con1_16.png",
+                description: "시추안 스타일의 마파두부를 주력 메뉴로 하는 중식당. 어향육사, 조개술찜도 인기 있는 메뉴다.",
+                rating: 4.6,
+                situations: ["회식"],
+                features: ["발레파킹", "단체룸구비"],
+                distance: 0.5,
+                reviewCount: 90
+            },
+            {
+                name: "고센기와집갈비",
+                category: "한식",
+                image: "./img/con1_17.png",
+                description: "100년이 된 고택을 개조하여 만든 한옥 고깃집. 생갈비와 양념갈비는 식사로 냉면도 맛볼 수 있다.",
+                rating: 4.5,
+                situations: ["회식", "가족 모임"],
+                features: ["주차가능", "포토존"],
+                distance: 1.2,
+                reviewCount: 128
+            },
+            {
+                name: "마이클어반팜테이블 ",
+                category: "양식",
+                image: "./img/con1_18.png",
+                description: "부산의 제철 식재료를 사용하여 미국식으로 풀어내는 아메리칸 레스토랑. 치킨롤리팝, 문어&감자 등이 추천 메뉴.",
+                rating: 4.8,
+                situations: ["친구 모임" , "데이트"],
+                features: ["테라스", "가성비"],
+                distance: 1.9,
+                reviewCount: 228
+            },
+            {
+                name: "고플린피자",
+                category: "양식",
+                image: "./img/con1_19.png",
+                description: "피자와 맥주를 함께 즐길 수 있는 미국식 피자 전문점이다. 도우는 얇은 씬 도우로, 바삭하고 쫄깃한 식감이 특징이다. 시그니처 피자는 살라미와 바질페스토, 버섯이 듬뿍 올라간 살라미바질페스토피자다.",
+                rating: 4.7,
+                situations: ["노키즈존" , "데이트"],
+                features: ["주차불가", "예약가능"],
+                distance: 2.9,
+                reviewCount: 259
+            },
+            {
+                name: "때깔로무역",
+                category: "양식",
+                image: "./img/con1_20.png",
+                description: "유럽 가정식 햄을 직접 만드는 곳. 매콤한 소스를 뿌린 때깔로타코가 인기 메뉴다. 일주일 동안 숙성시켜 만든 잠봉햄에 마능향이 곁들인 잠봉 오일 파스타와 저온 숙성한 부챗살 스테이크를 맛볼 수 있다. ",
+                rating: 4.8,
+                situations: ["반려견 동반"],
+                features: ["주차가능", "낮 영업"],
+                distance: 3.5,
+                reviewCount: 395
+            },
+            {
+                name: "뜻한바",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "계절감 있는 재료로 구성된 일식 오마카세 전문점. 한식과 일식을 퓨전한 음식들을 맛볼 수 있다. 편안한 분위기에 대화하며 식사를 할 수 있고, 가격도 합리적이다. ",
+                rating: 4.9,
+                situations: ["데이트" , "친구 모임"],
+                features: ["주차불가", "분위기 맛집"],
+                distance: 4.5,
+                reviewCount: 105
+            },
+            {
+                name: "갓포쿠마카세",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "부담 없는 가격으로 제철 식자재를 이용한 격식 있는 오마카세를 선보이는 갓포 요리 전문점. . 식전요리로 나오는 수란은 새콤한 소스가 곁들여져 입맛을 돋우며, 메인으로 나오는 사시미가 신선하다. 후토마키도 한입 가득 채우며 디저트까지 맛볼 수 있는 곳. ",
+                rating: 4.7,
+                situations: ["데이트" , "노키즈존"],
+                features: ["예약위주", "연중무휴"],
+                distance: 1.2,
+                reviewCount: 175
+            },
+            {
+                name: "리키하우스",
+                category: "기타",
+                image: "./img/con1_22.png",
+                description: "다람쥐 모형으로 포인트를 준 파이 전문 카페. 미트파이, 애플파이, 바나나크림파이 등 다양한 파이를 선보인다. 커피는 취향에 따라 원두를 선택할 수 있어 디저트와 함께 즐기기 좋다.",
+                rating: 4.8,
+                situations: ["반려견 동반" , "노키즈존"],
+                features: ["포장", "주차가능"],
+                distance: 0.8,
+                reviewCount: 197
+            },
+            {
+                name: "우탕",
+                category: "한식",
+                image: "./img/con1_24.png",
+                description: "소 갈비탕을 전문으로 하는 곳으로, 시그니처 메뉴인 얼큰갈비탕은 살이 푸짐하게 붙어 있는 큼직한 갈비뼈가 압도한다. 다른 곳에서는 보기 힘든 갈비수육도 추천.",
+                rating: 4.7,
+                situations: ["혼밥" , "아이동반"],
+                features: ["포장", "개별,단체좌석"],
+                distance: 2.8,
+                reviewCount: 350
+            },
+            {
+                name: "목동백년국수",
+                category: "한식",
+                image: "./img/con1_25.png",
+                description: "합리적인 가격으로 잔치국수와 수제비를 맛볼 수 있는 곳. 수제비는 맑은 육수와 얼큰한 육수 중 선택할 수 있다. 코다리 비빔국수와 비빔냉면도 추천 메뉴",
+                rating: 5.0,
+                situations: ["혼밥" , "아이동반"],
+                features: ["주차 불가", "영유아 의자"],
+                distance: 3.2,
+                reviewCount: 177
+            },
+            {
+                name: "강남 교자",
+                category: "한식",
+                image: "./img/con1_1.png",
+                description: "명동교자에서 일했던 조리장이 강남에 오픈한 칼국수 전문점. 담백한 칼국수와 만두가 제공됩니다. 푸근한 국물에 말아내는 부드러운 칼국수 면이 일품입니다.",
+                rating: 4.6,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 0.5,
+                reviewCount: 150
+            },
+            {
+                name: "갓덴 스시",
+                category: "일식",
+                image: "./img/con1_4.png",
+                description: "본점이 일본에 있는 스시전문점 갓덴스시 한국직영점. 일본 셰프가 직접 한국으로 와 근무하고 있으며, 일본인 손님도 많이 찾는다고 합니다.",
+                rating: 4.9,
+                situations: ["회식"],
+                features: ["바 테이블", "예약가능"],
+                distance: 1.2,
+                reviewCount: 200
+            },
+            {
+                name: "바비 레드",
+                category: "양식",
+                image: "./img/con1_3.png",
+                description: "매운 갈비 파스타의 원조집. 퓨전 레스토랑으로 한식과 이탈리안의 독특한 만남. 좋은 분위기 속에서 이색적인 퓨전 음식을 즐길 수 있어 남녀노소 불문하고 인기인 맛집입니다.",
+                rating: 4.7,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["개별,단체룸", "예약가능"],
+                distance: 0.8,
+                reviewCount: 180
+            },
+            {
+                name: "중화원",
+                category: "중식",
+                image: "./img/con1_4.png",
+                description: "배달 안 되는 중국집임에도 항상 손님들이 많이 찾는곳으로 가격도 저렴한 편입니다. 3/4인분 해물누룽지탕이 대표 메뉴입니다.",
+                rating: 4.5,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "예약가능"],
+                distance: 0.3,
+                reviewCount: 120
+            },
+            {
+                name: "파이브가이즈",
+                category: "기타",
+                image: "./img/con1_5.png",
+                description: "미국의 3대 유명버거 파이브가이즈가 드디어 강남에 상륙했습니다. 현지의 맛을 제대로 느낄수 있는 곳으로 햄버거. 모든 토핑이 무료임으로 취향에 맞게 골라서 드실수 있으니 참고하시기 바랍니다.",
+                rating: 4.6,
+                situations: ["데이트"],
+                features: ["웨이팅석", "예약불가"],
+                distance: 1.0,
+                reviewCount: 250
+            },
+            {
+                name: "로컬 코너",
+                category: "기타",
+                image: "./img/con1_6.png",
+                description: "달콤한 디저트와 커피가 다양하게 마련되어 있는 카페, 로컬코너의 2호점이다. 바나나크럼블과 블루베리크럼블이 시그니처 디저트로, 세트로 주문하면 아이스크림을 곁들일 수 있다.",
+                rating: 4.8,
+                situations: ["데이트"],
+                features: ["포장", "예약가능"],
+                distance: 0.7,
+                reviewCount: 90
+            },
+            {
+                name: "눈꽃떡송이",
+                category: "기타",
+                image: "./img/con1_7.png",
+                description: "분식, 곱창, 빙수를 함께 즐길 수 있는 곳. 여름철엔 얼음 위에 다양한 토핑을 올린 빙수가 인기며, 간단한 식사로 분식류와 곱창 등을 골라도 좋다.",
+                rating: 4.6,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 1.5,
+                reviewCount: 110
+            },
+            {
+                name: "금산삼계탕",
+                category: "한식",
+                image: "./img/con1_8.png",
+                description: "40년 가까이 삼계탕과 고디탕을 선보이는 곳. 얼음 위에서 하룻밤 숙성시킨 영계를 사용해 육질이 부드럽다. 상황삼계탕, 전복삼계탕 등 삼계탕의 종류도 다양한 편이다.",
+                rating: 5.0,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.0,
+                reviewCount: 300
+            },
+            {
+                name: "제로컴플렉스",
+                category: "기타",
+                image: "./img/con1_9.png",
+                description: "네오비스트로를 표방하는 곳으로, 이충후 셰프의 크리에이티브한 프렌치 코스를 맛볼 수 있다. 미니멀한 인테리어에, 허브와 특수 채소를 많이 사용하여 아름다운 플레이팅을 만드는 것이 특징이다.",
+                rating: 4.7,
+                situations: ["친구 모임"],
+                features: ["발레파킹", "예약가능"],
+                distance: 1.8,
+                reviewCount: 80
+            },
+            {
+                name: "꾸아",
+                category: "기타",
+                image: "./img/con1_10.png",
+                description: "왕갈비쌀국수와 반쎄오가 인기 있는 베트남 음식점. 왕갈비쌀국수에는 갈빗대가 통째로 들어간다. 다낭 현지 방식으로 제대로 만든 반쎄오, 비장탄으로 구워낸 분짜도 추천.",
+                rating: 4.5,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["단체이용", "포장"],
+                distance: 1.3,
+                reviewCount: 160
+            },
+            {
+                name: "마마리다이닝",
+                category: "한식",
+                image: "./img/con1_11.png",
+                description: "밍글스 강민구 셰프와 마마리마켓 송하슬람 셰프가 오픈한 한식 다이닝 레스토랑. 한식에 기반을 두어 캐주얼한 양식을 함께 선보인다. 제철회덮밥반상과 마마폴리탄파스타가 시그니처 메뉴다.",
+                rating: 4.7,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.2,
+                reviewCount: 140
+            },
+            {
+                name: "스케치테이블성수",
+                category: "기타",
+                image: "./img/con1_12.png",
+                description: "다채로운 이탈리아 요리와 독특한 샐러드를 선보이는 스케치테이블의 성수점. 새우 내장으로 풍미를 더한 새우비스크파스타가 대표 메뉴.",
+                rating: 5.0,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 2.5,
+                reviewCount: 220
+            },
+            {
+                name: "정인 면옥",
+                category: "기타",
+                image: "./img/con1_13.png",
+                description: "신세대 평양냉면의 선두주자, 평양냉면 마니아 사이에서 큰 호평을 받고 있다. 까칠하게 입에 감기는 메밀 면과 잡미가 없이 맑고 깨끗한 육수가 인상적이다.",
+                rating: 4.8,
+                situations: ["혼밥"],
+                features: ["1인석", "주차가능"],
+                distance: 1.5,
+                reviewCount: 180
+            },
+            {
+                name: "낙원의 소바",
+                category: "일식",
+                image: "./img/con1_14.png",
+                description: "전주식 소바와 생레몬이 들어간 레몬 소바를 맛볼 수 있는 메밀국수 전문점.  나베 전골 우동과 가쓰오부시로 맛을 낸 고기 온소바도 추천하는 메뉴.",
+                rating: 4.6,
+                situations: ["혼밥"],
+                features: ["연중무휴", "주차불가"],
+                distance: 3.5,
+                reviewCount: 160
+            },
+            {
+                name: "산동만두",
+                category: "중식",
+                image: "./img/con1_15.png",
+                description: "중국식 고기만둣집. 보들보들한 만두피 안에 소가 꽉 차있다. 만두뿐 아니라 공갈빵, 중국호떡 등도 맛볼 수 있다.",
+                rating: 4.7,
+                situations: ["노키즈존"],
+                features: ["아침식사", "좁은 내부"],
+                distance: 1.6,
+                reviewCount: 300
+            },
+            {
+                name: "경몽루",
+                category: "중식",
+                image: "./img/con1_16.png",
+                description: "시추안 스타일의 마파두부를 주력 메뉴로 하는 중식당. 어향육사, 조개술찜도 인기 있는 메뉴다.",
+                rating: 4.6,
+                situations: ["회식"],
+                features: ["발레파킹", "단체룸구비"],
+                distance: 0.5,
+                reviewCount: 90
+            },
+            {
+                name: "고센기와집갈비",
+                category: "한식",
+                image: "./img/con1_17.png",
+                description: "100년이 된 고택을 개조하여 만든 한옥 고깃집. 생갈비와 양념갈비는 식사로 냉면도 맛볼 수 있다.",
+                rating: 4.5,
+                situations: ["회식", "가족 모임"],
+                features: ["주차가능", "포토존"],
+                distance: 1.2,
+                reviewCount: 128
+            },
+            {
+                name: "마이클어반팜테이블 ",
+                category: "양식",
+                image: "./img/con1_18.png",
+                description: "부산의 제철 식재료를 사용하여 미국식으로 풀어내는 아메리칸 레스토랑. 치킨롤리팝, 문어&감자 등이 추천 메뉴.",
+                rating: 4.8,
+                situations: ["친구 모임" , "데이트"],
+                features: ["테라스", "가성비"],
+                distance: 1.9,
+                reviewCount: 228
+            },
+            {
+                name: "고플린피자",
+                category: "양식",
+                image: "./img/con1_19.png",
+                description: "피자와 맥주를 함께 즐길 수 있는 미국식 피자 전문점이다. 도우는 얇은 씬 도우로, 바삭하고 쫄깃한 식감이 특징이다. 시그니처 피자는 살라미와 바질페스토, 버섯이 듬뿍 올라간 살라미바질페스토피자다.",
+                rating: 4.7,
+                situations: ["노키즈존" , "데이트"],
+                features: ["주차불가", "예약가능"],
+                distance: 2.9,
+                reviewCount: 259
+            },
+            {
+                name: "때깔로무역",
+                category: "양식",
+                image: "./img/con1_20.png",
+                description: "유럽 가정식 햄을 직접 만드는 곳. 매콤한 소스를 뿌린 때깔로타코가 인기 메뉴다. 일주일 동안 숙성시켜 만든 잠봉햄에 마능향이 곁들인 잠봉 오일 파스타와 저온 숙성한 부챗살 스테이크를 맛볼 수 있다. ",
+                rating: 4.8,
+                situations: ["반려견 동반"],
+                features: ["주차가능", "낮 영업"],
+                distance: 3.5,
+                reviewCount: 395
+            },
+            {
+                name: "뜻한바",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "계절감 있는 재료로 구성된 일식 오마카세 전문점. 한식과 일식을 퓨전한 음식들을 맛볼 수 있다. 편안한 분위기에 대화하며 식사를 할 수 있고, 가격도 합리적이다. ",
+                rating: 4.9,
+                situations: ["데이트" , "친구 모임"],
+                features: ["주차불가", "분위기 맛집"],
+                distance: 4.5,
+                reviewCount: 105
+            },
+            {
+                name: "갓포쿠마카세",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "부담 없는 가격으로 제철 식자재를 이용한 격식 있는 오마카세를 선보이는 갓포 요리 전문점. . 식전요리로 나오는 수란은 새콤한 소스가 곁들여져 입맛을 돋우며, 메인으로 나오는 사시미가 신선하다. 후토마키도 한입 가득 채우며 디저트까지 맛볼 수 있는 곳. ",
+                rating: 4.7,
+                situations: ["데이트" , "노키즈존"],
+                features: ["예약위주", "연중무휴"],
+                distance: 1.2,
+                reviewCount: 175
+            },
+            {
+                name: "리키하우스",
+                category: "기타",
+                image: "./img/con1_22.png",
+                description: "다람쥐 모형으로 포인트를 준 파이 전문 카페. 미트파이, 애플파이, 바나나크림파이 등 다양한 파이를 선보인다. 커피는 취향에 따라 원두를 선택할 수 있어 디저트와 함께 즐기기 좋다.",
+                rating: 4.8,
+                situations: ["반려견 동반" , "노키즈존"],
+                features: ["포장", "주차가능"],
+                distance: 0.8,
+                reviewCount: 197
+            },
+            {
+                name: "우탕",
+                category: "한식",
+                image: "./img/con1_24.png",
+                description: "소 갈비탕을 전문으로 하는 곳으로, 시그니처 메뉴인 얼큰갈비탕은 살이 푸짐하게 붙어 있는 큼직한 갈비뼈가 압도한다. 다른 곳에서는 보기 힘든 갈비수육도 추천.",
+                rating: 4.7,
+                situations: ["혼밥" , "아이동반"],
+                features: ["포장", "개별,단체좌석"],
+                distance: 2.8,
+                reviewCount: 350
+            },
+            {
+                name: "목동백년국수",
+                category: "한식",
+                image: "./img/con1_25.png",
+                description: "합리적인 가격으로 잔치국수와 수제비를 맛볼 수 있는 곳. 수제비는 맑은 육수와 얼큰한 육수 중 선택할 수 있다. 코다리 비빔국수와 비빔냉면도 추천 메뉴",
+                rating: 5.0,
+                situations: ["혼밥" , "아이동반"],
+                features: ["주차 불가", "영유아 의자"],
+                distance: 3.2,
+                reviewCount: 177
+            },
+            {
+                name: "강남 교자",
+                category: "한식",
+                image: "./img/con1_1.png",
+                description: "명동교자에서 일했던 조리장이 강남에 오픈한 칼국수 전문점. 담백한 칼국수와 만두가 제공됩니다. 푸근한 국물에 말아내는 부드러운 칼국수 면이 일품입니다.",
+                rating: 4.6,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 0.5,
+                reviewCount: 150
+            },
+            {
+                name: "갓덴 스시",
+                category: "일식",
+                image: "./img/con1_4.png",
+                description: "본점이 일본에 있는 스시전문점 갓덴스시 한국직영점. 일본 셰프가 직접 한국으로 와 근무하고 있으며, 일본인 손님도 많이 찾는다고 합니다.",
+                rating: 4.9,
+                situations: ["회식"],
+                features: ["바 테이블", "예약가능"],
+                distance: 1.2,
+                reviewCount: 200
+            },
+            {
+                name: "바비 레드",
+                category: "양식",
+                image: "./img/con1_3.png",
+                description: "매운 갈비 파스타의 원조집. 퓨전 레스토랑으로 한식과 이탈리안의 독특한 만남. 좋은 분위기 속에서 이색적인 퓨전 음식을 즐길 수 있어 남녀노소 불문하고 인기인 맛집입니다.",
+                rating: 4.7,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["개별,단체룸", "예약가능"],
+                distance: 0.8,
+                reviewCount: 180
+            },
+            {
+                name: "중화원",
+                category: "중식",
+                image: "./img/con1_4.png",
+                description: "배달 안 되는 중국집임에도 항상 손님들이 많이 찾는곳으로 가격도 저렴한 편입니다. 3/4인분 해물누룽지탕이 대표 메뉴입니다.",
+                rating: 4.5,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "예약가능"],
+                distance: 0.3,
+                reviewCount: 120
+            },
+            {
+                name: "파이브가이즈",
+                category: "기타",
+                image: "./img/con1_5.png",
+                description: "미국의 3대 유명버거 파이브가이즈가 드디어 강남에 상륙했습니다. 현지의 맛을 제대로 느낄수 있는 곳으로 햄버거. 모든 토핑이 무료임으로 취향에 맞게 골라서 드실수 있으니 참고하시기 바랍니다.",
+                rating: 4.6,
+                situations: ["데이트"],
+                features: ["웨이팅석", "예약불가"],
+                distance: 1.0,
+                reviewCount: 250
+            },
+            {
+                name: "로컬 코너",
+                category: "기타",
+                image: "./img/con1_6.png",
+                description: "달콤한 디저트와 커피가 다양하게 마련되어 있는 카페, 로컬코너의 2호점이다. 바나나크럼블과 블루베리크럼블이 시그니처 디저트로, 세트로 주문하면 아이스크림을 곁들일 수 있다.",
+                rating: 4.8,
+                situations: ["데이트"],
+                features: ["포장", "예약가능"],
+                distance: 0.7,
+                reviewCount: 90
+            },
+            {
+                name: "눈꽃떡송이",
+                category: "기타",
+                image: "./img/con1_7.png",
+                description: "분식, 곱창, 빙수를 함께 즐길 수 있는 곳. 여름철엔 얼음 위에 다양한 토핑을 올린 빙수가 인기며, 간단한 식사로 분식류와 곱창 등을 골라도 좋다.",
+                rating: 4.6,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 1.5,
+                reviewCount: 110
+            },
+            {
+                name: "금산삼계탕",
+                category: "한식",
+                image: "./img/con1_8.png",
+                description: "40년 가까이 삼계탕과 고디탕을 선보이는 곳. 얼음 위에서 하룻밤 숙성시킨 영계를 사용해 육질이 부드럽다. 상황삼계탕, 전복삼계탕 등 삼계탕의 종류도 다양한 편이다.",
+                rating: 5.0,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.0,
+                reviewCount: 300
+            },
+            {
+                name: "제로컴플렉스",
+                category: "기타",
+                image: "./img/con1_9.png",
+                description: "네오비스트로를 표방하는 곳으로, 이충후 셰프의 크리에이티브한 프렌치 코스를 맛볼 수 있다. 미니멀한 인테리어에, 허브와 특수 채소를 많이 사용하여 아름다운 플레이팅을 만드는 것이 특징이다.",
+                rating: 4.7,
+                situations: ["친구 모임"],
+                features: ["발레파킹", "예약가능"],
+                distance: 1.8,
+                reviewCount: 80
+            },
+            {
+                name: "꾸아",
+                category: "기타",
+                image: "./img/con1_10.png",
+                description: "왕갈비쌀국수와 반쎄오가 인기 있는 베트남 음식점. 왕갈비쌀국수에는 갈빗대가 통째로 들어간다. 다낭 현지 방식으로 제대로 만든 반쎄오, 비장탄으로 구워낸 분짜도 추천.",
+                rating: 4.5,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["단체이용", "포장"],
+                distance: 1.3,
+                reviewCount: 160
+            },
+            {
+                name: "마마리다이닝",
+                category: "한식",
+                image: "./img/con1_11.png",
+                description: "밍글스 강민구 셰프와 마마리마켓 송하슬람 셰프가 오픈한 한식 다이닝 레스토랑. 한식에 기반을 두어 캐주얼한 양식을 함께 선보인다. 제철회덮밥반상과 마마폴리탄파스타가 시그니처 메뉴다.",
+                rating: 4.7,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.2,
+                reviewCount: 140
+            },
+            {
+                name: "스케치테이블성수",
+                category: "기타",
+                image: "./img/con1_12.png",
+                description: "다채로운 이탈리아 요리와 독특한 샐러드를 선보이는 스케치테이블의 성수점. 새우 내장으로 풍미를 더한 새우비스크파스타가 대표 메뉴.",
+                rating: 5.0,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 2.5,
+                reviewCount: 220
+            },
+            {
+                name: "정인 면옥",
+                category: "기타",
+                image: "./img/con1_13.png",
+                description: "신세대 평양냉면의 선두주자, 평양냉면 마니아 사이에서 큰 호평을 받고 있다. 까칠하게 입에 감기는 메밀 면과 잡미가 없이 맑고 깨끗한 육수가 인상적이다.",
+                rating: 4.8,
+                situations: ["혼밥"],
+                features: ["1인석", "주차가능"],
+                distance: 1.5,
+                reviewCount: 180
+            },
+            {
+                name: "낙원의 소바",
+                category: "일식",
+                image: "./img/con1_14.png",
+                description: "전주식 소바와 생레몬이 들어간 레몬 소바를 맛볼 수 있는 메밀국수 전문점.  나베 전골 우동과 가쓰오부시로 맛을 낸 고기 온소바도 추천하는 메뉴.",
+                rating: 4.6,
+                situations: ["혼밥"],
+                features: ["연중무휴", "주차불가"],
+                distance: 3.5,
+                reviewCount: 160
+            },
+            {
+                name: "산동만두",
+                category: "중식",
+                image: "./img/con1_15.png",
+                description: "중국식 고기만둣집. 보들보들한 만두피 안에 소가 꽉 차있다. 만두뿐 아니라 공갈빵, 중국호떡 등도 맛볼 수 있다.",
+                rating: 4.7,
+                situations: ["노키즈존"],
+                features: ["아침식사", "좁은 내부"],
+                distance: 1.6,
+                reviewCount: 300
+            },
+            {
+                name: "경몽루",
+                category: "중식",
+                image: "./img/con1_16.png",
+                description: "시추안 스타일의 마파두부를 주력 메뉴로 하는 중식당. 어향육사, 조개술찜도 인기 있는 메뉴다.",
+                rating: 4.6,
+                situations: ["회식"],
+                features: ["발레파킹", "단체룸구비"],
+                distance: 0.5,
+                reviewCount: 90
+            },
+            {
+                name: "고센기와집갈비",
+                category: "한식",
+                image: "./img/con1_17.png",
+                description: "100년이 된 고택을 개조하여 만든 한옥 고깃집. 생갈비와 양념갈비는 식사로 냉면도 맛볼 수 있다.",
+                rating: 4.5,
+                situations: ["회식", "가족 모임"],
+                features: ["주차가능", "포토존"],
+                distance: 1.2,
+                reviewCount: 128
+            },
+            {
+                name: "마이클어반팜테이블 ",
+                category: "양식",
+                image: "./img/con1_18.png",
+                description: "부산의 제철 식재료를 사용하여 미국식으로 풀어내는 아메리칸 레스토랑. 치킨롤리팝, 문어&감자 등이 추천 메뉴.",
+                rating: 4.8,
+                situations: ["친구 모임" , "데이트"],
+                features: ["테라스", "가성비"],
+                distance: 1.9,
+                reviewCount: 228
+            },
+            {
+                name: "고플린피자",
+                category: "양식",
+                image: "./img/con1_19.png",
+                description: "피자와 맥주를 함께 즐길 수 있는 미국식 피자 전문점이다. 도우는 얇은 씬 도우로, 바삭하고 쫄깃한 식감이 특징이다. 시그니처 피자는 살라미와 바질페스토, 버섯이 듬뿍 올라간 살라미바질페스토피자다.",
+                rating: 4.7,
+                situations: ["노키즈존" , "데이트"],
+                features: ["주차불가", "예약가능"],
+                distance: 2.9,
+                reviewCount: 259
+            },
+            {
+                name: "때깔로무역",
+                category: "양식",
+                image: "./img/con1_20.png",
+                description: "유럽 가정식 햄을 직접 만드는 곳. 매콤한 소스를 뿌린 때깔로타코가 인기 메뉴다. 일주일 동안 숙성시켜 만든 잠봉햄에 마능향이 곁들인 잠봉 오일 파스타와 저온 숙성한 부챗살 스테이크를 맛볼 수 있다. ",
+                rating: 4.8,
+                situations: ["반려견 동반"],
+                features: ["주차가능", "낮 영업"],
+                distance: 3.5,
+                reviewCount: 395
+            },
+            {
+                name: "뜻한바",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "계절감 있는 재료로 구성된 일식 오마카세 전문점. 한식과 일식을 퓨전한 음식들을 맛볼 수 있다. 편안한 분위기에 대화하며 식사를 할 수 있고, 가격도 합리적이다. ",
+                rating: 4.9,
+                situations: ["데이트" , "친구 모임"],
+                features: ["주차불가", "분위기 맛집"],
+                distance: 4.5,
+                reviewCount: 105
+            },
+            {
+                name: "갓포쿠마카세",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "부담 없는 가격으로 제철 식자재를 이용한 격식 있는 오마카세를 선보이는 갓포 요리 전문점. . 식전요리로 나오는 수란은 새콤한 소스가 곁들여져 입맛을 돋우며, 메인으로 나오는 사시미가 신선하다. 후토마키도 한입 가득 채우며 디저트까지 맛볼 수 있는 곳. ",
+                rating: 4.7,
+                situations: ["데이트" , "노키즈존"],
+                features: ["예약위주", "연중무휴"],
+                distance: 1.2,
+                reviewCount: 175
+            },
+            {
+                name: "리키하우스",
+                category: "기타",
+                image: "./img/con1_22.png",
+                description: "다람쥐 모형으로 포인트를 준 파이 전문 카페. 미트파이, 애플파이, 바나나크림파이 등 다양한 파이를 선보인다. 커피는 취향에 따라 원두를 선택할 수 있어 디저트와 함께 즐기기 좋다.",
+                rating: 4.8,
+                situations: ["반려견 동반" , "노키즈존"],
+                features: ["포장", "주차가능"],
+                distance: 0.8,
+                reviewCount: 197
+            },
+            {
+                name: "우탕",
+                category: "한식",
+                image: "./img/con1_24.png",
+                description: "소 갈비탕을 전문으로 하는 곳으로, 시그니처 메뉴인 얼큰갈비탕은 살이 푸짐하게 붙어 있는 큼직한 갈비뼈가 압도한다. 다른 곳에서는 보기 힘든 갈비수육도 추천.",
+                rating: 4.7,
+                situations: ["혼밥" , "아이동반"],
+                features: ["포장", "개별,단체좌석"],
+                distance: 2.8,
+                reviewCount: 350
+            },
+            {
+                name: "목동백년국수",
+                category: "한식",
+                image: "./img/con1_25.png",
+                description: "합리적인 가격으로 잔치국수와 수제비를 맛볼 수 있는 곳. 수제비는 맑은 육수와 얼큰한 육수 중 선택할 수 있다. 코다리 비빔국수와 비빔냉면도 추천 메뉴",
+                rating: 5.0,
+                situations: ["혼밥" , "아이동반"],
+                features: ["주차 불가", "영유아 의자"],
+                distance: 3.2,
+                reviewCount: 177
+            },
+            {
+                name: "강남 교자",
+                category: "한식",
+                image: "./img/con1_1.png",
+                description: "명동교자에서 일했던 조리장이 강남에 오픈한 칼국수 전문점. 담백한 칼국수와 만두가 제공됩니다. 푸근한 국물에 말아내는 부드러운 칼국수 면이 일품입니다.",
+                rating: 4.6,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 0.5,
+                reviewCount: 150
+            },
+            {
+                name: "갓덴 스시",
+                category: "일식",
+                image: "./img/con1_4.png",
+                description: "본점이 일본에 있는 스시전문점 갓덴스시 한국직영점. 일본 셰프가 직접 한국으로 와 근무하고 있으며, 일본인 손님도 많이 찾는다고 합니다.",
+                rating: 4.9,
+                situations: ["회식"],
+                features: ["바 테이블", "예약가능"],
+                distance: 1.2,
+                reviewCount: 200
+            },
+            {
+                name: "바비 레드",
+                category: "양식",
+                image: "./img/con1_3.png",
+                description: "매운 갈비 파스타의 원조집. 퓨전 레스토랑으로 한식과 이탈리안의 독특한 만남. 좋은 분위기 속에서 이색적인 퓨전 음식을 즐길 수 있어 남녀노소 불문하고 인기인 맛집입니다.",
+                rating: 4.7,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["개별,단체룸", "예약가능"],
+                distance: 0.8,
+                reviewCount: 180
+            },
+            {
+                name: "중화원",
+                category: "중식",
+                image: "./img/con1_4.png",
+                description: "배달 안 되는 중국집임에도 항상 손님들이 많이 찾는곳으로 가격도 저렴한 편입니다. 3/4인분 해물누룽지탕이 대표 메뉴입니다.",
+                rating: 4.5,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "예약가능"],
+                distance: 0.3,
+                reviewCount: 120
+            },
+            {
+                name: "파이브가이즈",
+                category: "기타",
+                image: "./img/con1_5.png",
+                description: "미국의 3대 유명버거 파이브가이즈가 드디어 강남에 상륙했습니다. 현지의 맛을 제대로 느낄수 있는 곳으로 햄버거. 모든 토핑이 무료임으로 취향에 맞게 골라서 드실수 있으니 참고하시기 바랍니다.",
+                rating: 4.6,
+                situations: ["데이트"],
+                features: ["웨이팅석", "예약불가"],
+                distance: 1.0,
+                reviewCount: 250
+            },
+            {
+                name: "로컬 코너",
+                category: "기타",
+                image: "./img/con1_6.png",
+                description: "달콤한 디저트와 커피가 다양하게 마련되어 있는 카페, 로컬코너의 2호점이다. 바나나크럼블과 블루베리크럼블이 시그니처 디저트로, 세트로 주문하면 아이스크림을 곁들일 수 있다.",
+                rating: 4.8,
+                situations: ["데이트"],
+                features: ["포장", "예약가능"],
+                distance: 0.7,
+                reviewCount: 90
+            },
+            {
+                name: "눈꽃떡송이",
+                category: "기타",
+                image: "./img/con1_7.png",
+                description: "분식, 곱창, 빙수를 함께 즐길 수 있는 곳. 여름철엔 얼음 위에 다양한 토핑을 올린 빙수가 인기며, 간단한 식사로 분식류와 곱창 등을 골라도 좋다.",
+                rating: 4.6,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 1.5,
+                reviewCount: 110
+            },
+            {
+                name: "금산삼계탕",
+                category: "한식",
+                image: "./img/con1_8.png",
+                description: "40년 가까이 삼계탕과 고디탕을 선보이는 곳. 얼음 위에서 하룻밤 숙성시킨 영계를 사용해 육질이 부드럽다. 상황삼계탕, 전복삼계탕 등 삼계탕의 종류도 다양한 편이다.",
+                rating: 5.0,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.0,
+                reviewCount: 300
+            },
+            {
+                name: "제로컴플렉스",
+                category: "기타",
+                image: "./img/con1_9.png",
+                description: "네오비스트로를 표방하는 곳으로, 이충후 셰프의 크리에이티브한 프렌치 코스를 맛볼 수 있다. 미니멀한 인테리어에, 허브와 특수 채소를 많이 사용하여 아름다운 플레이팅을 만드는 것이 특징이다.",
+                rating: 4.7,
+                situations: ["친구 모임"],
+                features: ["발레파킹", "예약가능"],
+                distance: 1.8,
+                reviewCount: 80
+            },
+            {
+                name: "꾸아",
+                category: "기타",
+                image: "./img/con1_10.png",
+                description: "왕갈비쌀국수와 반쎄오가 인기 있는 베트남 음식점. 왕갈비쌀국수에는 갈빗대가 통째로 들어간다. 다낭 현지 방식으로 제대로 만든 반쎄오, 비장탄으로 구워낸 분짜도 추천.",
+                rating: 4.5,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["단체이용", "포장"],
+                distance: 1.3,
+                reviewCount: 160
+            },
+            {
+                name: "마마리다이닝",
+                category: "한식",
+                image: "./img/con1_11.png",
+                description: "밍글스 강민구 셰프와 마마리마켓 송하슬람 셰프가 오픈한 한식 다이닝 레스토랑. 한식에 기반을 두어 캐주얼한 양식을 함께 선보인다. 제철회덮밥반상과 마마폴리탄파스타가 시그니처 메뉴다.",
+                rating: 4.7,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.2,
+                reviewCount: 140
+            },
+            {
+                name: "스케치테이블성수",
+                category: "기타",
+                image: "./img/con1_12.png",
+                description: "다채로운 이탈리아 요리와 독특한 샐러드를 선보이는 스케치테이블의 성수점. 새우 내장으로 풍미를 더한 새우비스크파스타가 대표 메뉴.",
+                rating: 5.0,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 2.5,
+                reviewCount: 220
+            },
+            {
+                name: "정인 면옥",
+                category: "기타",
+                image: "./img/con1_13.png",
+                description: "신세대 평양냉면의 선두주자, 평양냉면 마니아 사이에서 큰 호평을 받고 있다. 까칠하게 입에 감기는 메밀 면과 잡미가 없이 맑고 깨끗한 육수가 인상적이다.",
+                rating: 4.8,
+                situations: ["혼밥"],
+                features: ["1인석", "주차가능"],
+                distance: 1.5,
+                reviewCount: 180
+            },
+            {
+                name: "낙원의 소바",
+                category: "일식",
+                image: "./img/con1_14.png",
+                description: "전주식 소바와 생레몬이 들어간 레몬 소바를 맛볼 수 있는 메밀국수 전문점.  나베 전골 우동과 가쓰오부시로 맛을 낸 고기 온소바도 추천하는 메뉴.",
+                rating: 4.6,
+                situations: ["혼밥"],
+                features: ["연중무휴", "주차불가"],
+                distance: 3.5,
+                reviewCount: 160
+            },
+            {
+                name: "산동만두",
+                category: "중식",
+                image: "./img/con1_15.png",
+                description: "중국식 고기만둣집. 보들보들한 만두피 안에 소가 꽉 차있다. 만두뿐 아니라 공갈빵, 중국호떡 등도 맛볼 수 있다.",
+                rating: 4.7,
+                situations: ["노키즈존"],
+                features: ["아침식사", "좁은 내부"],
+                distance: 1.6,
+                reviewCount: 300
+            },
+            {
+                name: "경몽루",
+                category: "중식",
+                image: "./img/con1_16.png",
+                description: "시추안 스타일의 마파두부를 주력 메뉴로 하는 중식당. 어향육사, 조개술찜도 인기 있는 메뉴다.",
+                rating: 4.6,
+                situations: ["혼밥" , "데이트"],
+                features: ["발레파킹", "단체룸구비"],
+                distance: 0.5,
+                reviewCount: 90
+            },
+            {
+                name: "고센기와집갈비",
+                category: "한식",
+                image: "./img/con1_17.png",
+                description: "100년이 된 고택을 개조하여 만든 한옥 고깃집. 생갈비와 양념갈비는 식사로 냉면도 맛볼 수 있다.",
+                rating: 4.5,
+                situations: ["회식", "가족 모임"],
+                features: ["주차가능", "포토존"],
+                distance: 1.2,
+                reviewCount: 128
+            },
+            {
+                name: "마이클어반팜테이블 ",
+                category: "양식",
+                image: "./img/con1_18.png",
+                description: "부산의 제철 식재료를 사용하여 미국식으로 풀어내는 아메리칸 레스토랑. 치킨롤리팝, 문어&감자 등이 추천 메뉴.",
+                rating: 4.8,
+                situations: ["친구 모임" , "데이트"],
+                features: ["테라스", "가성비"],
+                distance: 1.9,
+                reviewCount: 228
+            },
+            {
+                name: "고플린피자",
+                category: "양식",
+                image: "./img/con1_19.png",
+                description: "피자와 맥주를 함께 즐길 수 있는 미국식 피자 전문점이다. 도우는 얇은 씬 도우로, 바삭하고 쫄깃한 식감이 특징이다. 시그니처 피자는 살라미와 바질페스토, 버섯이 듬뿍 올라간 살라미바질페스토피자다.",
+                rating: 4.7,
+                situations: ["노키즈존" , "데이트"],
+                features: ["주차불가", "예약가능"],
+                distance: 2.9,
+                reviewCount: 259
+            },
+            {
+                name: "때깔로무역",
+                category: "양식",
+                image: "./img/con1_20.png",
+                description: "유럽 가정식 햄을 직접 만드는 곳. 매콤한 소스를 뿌린 때깔로타코가 인기 메뉴다. 일주일 동안 숙성시켜 만든 잠봉햄에 마능향이 곁들인 잠봉 오일 파스타와 저온 숙성한 부챗살 스테이크를 맛볼 수 있다. ",
+                rating: 4.8,
+                situations: ["반려견 동반"],
+                features: ["주차가능", "낮 영업"],
+                distance: 3.5,
+                reviewCount: 395
+            },
+            {
+                name: "뜻한바",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "계절감 있는 재료로 구성된 일식 오마카세 전문점. 한식과 일식을 퓨전한 음식들을 맛볼 수 있다. 편안한 분위기에 대화하며 식사를 할 수 있고, 가격도 합리적이다. ",
+                rating: 4.9,
+                situations: ["데이트" , "친구 모임"],
+                features: ["주차불가", "분위기 맛집"],
+                distance: 4.5,
+                reviewCount: 105
+            },
+            {
+                name: "갓포쿠마카세",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "부담 없는 가격으로 제철 식자재를 이용한 격식 있는 오마카세를 선보이는 갓포 요리 전문점. . 식전요리로 나오는 수란은 새콤한 소스가 곁들여져 입맛을 돋우며, 메인으로 나오는 사시미가 신선하다. 후토마키도 한입 가득 채우며 디저트까지 맛볼 수 있는 곳. ",
+                rating: 4.7,
+                situations: ["반려견 동반" , "아이동반"],
+                features: ["예약위주", "연중무휴"],
+                distance: 1.2,
+                reviewCount: 175
+            },
+            {
+                name: "리키하우스",
+                category: "기타",
+                image: "./img/con1_22.png",
+                description: "다람쥐 모형으로 포인트를 준 파이 전문 카페. 미트파이, 애플파이, 바나나크림파이 등 다양한 파이를 선보인다. 커피는 취향에 따라 원두를 선택할 수 있어 디저트와 함께 즐기기 좋다.",
+                rating: 4.8,
+                situations: ["반려견 동반" , "노키즈존"],
+                features: ["포장", "주차가능"],
+                distance: 0.8,
+                reviewCount: 197
+            },
+            {
+                name: "우탕",
+                category: "한식",
+                image: "./img/con1_24.png",
+                description: "소 갈비탕을 전문으로 하는 곳으로, 시그니처 메뉴인 얼큰갈비탕은 살이 푸짐하게 붙어 있는 큼직한 갈비뼈가 압도한다. 다른 곳에서는 보기 힘든 갈비수육도 추천.",
+                rating: 4.7,
+                situations: ["혼밥" , "아이동반"],
+                features: ["포장", "개별,단체좌석"],
+                distance: 2.8,
+                reviewCount: 350
+            },
+            {
+                name: "목동백년국수",
+                category: "한식",
+                image: "./img/con1_25.png",
+                description: "합리적인 가격으로 잔치국수와 수제비를 맛볼 수 있는 곳. 수제비는 맑은 육수와 얼큰한 육수 중 선택할 수 있다. 코다리 비빔국수와 비빔냉면도 추천 메뉴",
+                rating: 5.0,
+                situations: ["혼밥" , "아이동반"],
+                features: ["주차 불가", "영유아 의자"],
+                distance: 3.2,
+                reviewCount: 177
+            },
+            {
+                name: "강남 교자",
+                category: "한식",
+                image: "./img/con1_1.png",
+                description: "명동교자에서 일했던 조리장이 강남에 오픈한 칼국수 전문점. 담백한 칼국수와 만두가 제공됩니다. 푸근한 국물에 말아내는 부드러운 칼국수 면이 일품입니다.",
+                rating: 4.6,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 0.5,
+                reviewCount: 150
+            },
+            {
+                name: "갓덴 스시",
+                category: "일식",
+                image: "./img/con1_4.png",
+                description: "본점이 일본에 있는 스시전문점 갓덴스시 한국직영점. 일본 셰프가 직접 한국으로 와 근무하고 있으며, 일본인 손님도 많이 찾는다고 합니다.",
+                rating: 4.9,
+                situations: ["회식"],
+                features: ["바 테이블", "예약가능"],
+                distance: 1.2,
+                reviewCount: 200
+            },
+            {
+                name: "바비 레드",
+                category: "양식",
+                image: "./img/con1_3.png",
+                description: "매운 갈비 파스타의 원조집. 퓨전 레스토랑으로 한식과 이탈리안의 독특한 만남. 좋은 분위기 속에서 이색적인 퓨전 음식을 즐길 수 있어 남녀노소 불문하고 인기인 맛집입니다.",
+                rating: 4.7,
+                situations: ["아이동반" , "반려견 동반"],
+                features: ["개별,단체룸", "예약가능"],
+                distance: 0.8,
+                reviewCount: 180
+            },
+            {
+                name: "중화원",
+                category: "중식",
+                image: "./img/con1_4.png",
+                description: "배달 안 되는 중국집임에도 항상 손님들이 많이 찾는곳으로 가격도 저렴한 편입니다. 3/4인분 해물누룽지탕이 대표 메뉴입니다.",
+                rating: 4.5,
+                situations: ["아이동반" , "가족 모임"],
+                features: ["영유아 의자", "예약가능"],
+                distance: 0.3,
+                reviewCount: 120
+            },
+            {
+                name: "파이브가이즈",
+                category: "양식",
+                image: "./img/con1_5.png",
+                description: "미국의 3대 유명버거 파이브가이즈가 드디어 강남에 상륙했습니다. 현지의 맛을 제대로 느낄수 있는 곳으로 햄버거. 모든 토핑이 무료임으로 취향에 맞게 골라서 드실수 있으니 참고하시기 바랍니다.",
+                rating: 4.6,
+                situations: ["회식"],
+                features: ["웨이팅석", "예약불가"],
+                distance: 1.0,
+                reviewCount: 250
+            },
+            {
+                name: "로컬 코너",
+                category: "기타",
+                image: "./img/con1_6.png",
+                description: "달콤한 디저트와 커피가 다양하게 마련되어 있는 카페, 로컬코너의 2호점이다. 바나나크럼블과 블루베리크럼블이 시그니처 디저트로, 세트로 주문하면 아이스크림을 곁들일 수 있다.",
+                rating: 4.8,
+                situations: ["데이트"],
+                features: ["포장", "예약가능"],
+                distance: 0.7,
+                reviewCount: 90
+            },
+            {
+                name: "눈꽃떡송이",
+                category: "기타",
+                image: "./img/con1_7.png",
+                description: "분식, 곱창, 빙수를 함께 즐길 수 있는 곳. 여름철엔 얼음 위에 다양한 토핑을 올린 빙수가 인기며, 간단한 식사로 분식류와 곱창 등을 골라도 좋다.",
+                rating: 4.6,
+                situations: ["아이동반"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 1.5,
+                reviewCount: 110
+            },
+            {
+                name: "금산삼계탕",
+                category: "한식",
+                image: "./img/con1_8.png",
+                description: "40년 가까이 삼계탕과 고디탕을 선보이는 곳. 얼음 위에서 하룻밤 숙성시킨 영계를 사용해 육질이 부드럽다. 상황삼계탕, 전복삼계탕 등 삼계탕의 종류도 다양한 편이다.",
+                rating: 5.0,
+                situations: ["가족 모임" , "회식"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.0,
+                reviewCount: 300
+            },
+            {
+                name: "제로컴플렉스",
+                category: "기타",
+                image: "./img/con1_9.png",
+                description: "네오비스트로를 표방하는 곳으로, 이충후 셰프의 크리에이티브한 프렌치 코스를 맛볼 수 있다. 미니멀한 인테리어에, 허브와 특수 채소를 많이 사용하여 아름다운 플레이팅을 만드는 것이 특징이다.",
+                rating: 4.7,
+                situations: ["친구 모임"],
+                features: ["발레파킹", "예약가능"],
+                distance: 1.8,
+                reviewCount: 80
+            },
+            {
+                name: "꾸아",
+                category: "기타",
+                image: "./img/con1_10.png",
+                description: "왕갈비쌀국수와 반쎄오가 인기 있는 베트남 음식점. 왕갈비쌀국수에는 갈빗대가 통째로 들어간다. 다낭 현지 방식으로 제대로 만든 반쎄오, 비장탄으로 구워낸 분짜도 추천.",
+                rating: 4.5,
+                situations: ["데이트" , "반려견 동반"],
+                features: ["단체이용", "포장"],
+                distance: 1.3,
+                reviewCount: 160
+            },
+            {
+                name: "마마리다이닝",
+                category: "한식",
+                image: "./img/con1_11.png",
+                description: "밍글스 강민구 셰프와 마마리마켓 송하슬람 셰프가 오픈한 한식 다이닝 레스토랑. 한식에 기반을 두어 캐주얼한 양식을 함께 선보인다. 제철회덮밥반상과 마마폴리탄파스타가 시그니처 메뉴다.",
+                rating: 4.7,
+                situations: ["가족 모임"],
+                features: ["개별룸", "예약가능"],
+                distance: 2.2,
+                reviewCount: 140
+            },
+            {
+                name: "스케치테이블성수",
+                category: "기타",
+                image: "./img/con1_12.png",
+                description: "다채로운 이탈리아 요리와 독특한 샐러드를 선보이는 스케치테이블의 성수점. 새우 내장으로 풍미를 더한 새우비스크파스타가 대표 메뉴.",
+                rating: 5.0,
+                situations: ["가족 모임", "회식"],
+                features: ["영유아 의자", "주차가능"],
+                distance: 2.5,
+                reviewCount: 220
+            },
+            {
+                name: "정인 면옥",
+                category: "기타",
+                image: "./img/con1_13.png",
+                description: "신세대 평양냉면의 선두주자, 평양냉면 마니아 사이에서 큰 호평을 받고 있다. 까칠하게 입에 감기는 메밀 면과 잡미가 없이 맑고 깨끗한 육수가 인상적이다.",
+                rating: 4.8,
+                situations: ["혼밥"],
+                features: ["1인석", "주차가능"],
+                distance: 1.5,
+                reviewCount: 180
+            },
+            {
+                name: "낙원의 소바",
+                category: "일식",
+                image: "./img/con1_14.png",
+                description: "전주식 소바와 생레몬이 들어간 레몬 소바를 맛볼 수 있는 메밀국수 전문점.  나베 전골 우동과 가쓰오부시로 맛을 낸 고기 온소바도 추천하는 메뉴.",
+                rating: 4.6,
+                situations: ["혼밥" , "가족 모임"],
+                features: ["연중무휴", "주차불가"],
+                distance: 3.5,
+                reviewCount: 160
+            },
+            {
+                name: "산동만두",
+                category: "중식",
+                image: "./img/con1_15.png",
+                description: "중국식 고기만둣집. 보들보들한 만두피 안에 소가 꽉 차있다. 만두뿐 아니라 공갈빵, 중국호떡 등도 맛볼 수 있다.",
+                rating: 4.7,
+                situations: ["반려견 동반"],
+                features: ["아침식사", "좁은 내부"],
+                distance: 1.6,
+                reviewCount: 300
+            },
+            {
+                name: "경몽루",
+                category: "중식",
+                image: "./img/con1_16.png",
+                description: "시추안 스타일의 마파두부를 주력 메뉴로 하는 중식당. 어향육사, 조개술찜도 인기 있는 메뉴다.",
+                rating: 4.6,
+                situations: ["회식" , "친구 모임"],
+                features: ["발레파킹", "단체룸구비"],
+                distance: 0.5,
+                reviewCount: 90
+            },
+            {
+                name: "고센기와집갈비",
+                category: "한식",
+                image: "./img/con1_17.png",
+                description: "100년이 된 고택을 개조하여 만든 한옥 고깃집. 생갈비와 양념갈비는 식사로 냉면도 맛볼 수 있다.",
+                rating: 4.5,
+                situations: ["회식", "가족 모임"],
+                features: ["주차가능", "포토존"],
+                distance: 1.2,
+                reviewCount: 128
+            },
+            {
+                name: "마이클어반팜테이블 ",
+                category: "양식",
+                image: "./img/con1_18.png",
+                description: "부산의 제철 식재료를 사용하여 미국식으로 풀어내는 아메리칸 레스토랑. 치킨롤리팝, 문어&감자 등이 추천 메뉴.",
+                rating: 4.8,
+                situations: ["가족 모임" , "데이트"],
+                features: ["테라스", "가성비"],
+                distance: 1.9,
+                reviewCount: 228
+            },
+            {
+                name: "고플린피자",
+                category: "양식",
+                image: "./img/con1_19.png",
+                description: "피자와 맥주를 함께 즐길 수 있는 미국식 피자 전문점이다. 도우는 얇은 씬 도우로, 바삭하고 쫄깃한 식감이 특징이다. 시그니처 피자는 살라미와 바질페스토, 버섯이 듬뿍 올라간 살라미바질페스토피자다.",
+                rating: 4.7,
+                situations: ["노키즈존" , "데이트"],
+                features: ["주차불가", "예약가능"],
+                distance: 2.9,
+                reviewCount: 259
+            },
+            {
+                name: "때깔로무역",
+                category: "양식",
+                image: "./img/con1_20.png",
+                description: "유럽 가정식 햄을 직접 만드는 곳. 매콤한 소스를 뿌린 때깔로타코가 인기 메뉴다. 일주일 동안 숙성시켜 만든 잠봉햄에 마능향이 곁들인 잠봉 오일 파스타와 저온 숙성한 부챗살 스테이크를 맛볼 수 있다. ",
+                rating: 4.8,
+                situations: ["반려견 동반"],
+                features: ["주차가능", "낮 영업"],
+                distance: 3.5,
+                reviewCount: 395
+            },
+            {
+                name: "뜻한바",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "계절감 있는 재료로 구성된 일식 오마카세 전문점. 한식과 일식을 퓨전한 음식들을 맛볼 수 있다. 편안한 분위기에 대화하며 식사를 할 수 있고, 가격도 합리적이다. ",
+                rating: 4.9,
+                situations: ["데이트" , "친구 모임"],
+                features: ["주차불가", "분위기 맛집"],
+                distance: 4.5,
+                reviewCount: 105
+            },
+            {
+                name: "갓포쿠마카세",
+                category: "일식",
+                image: "./img/con1_21.png",
+                description: "부담 없는 가격으로 제철 식자재를 이용한 격식 있는 오마카세를 선보이는 갓포 요리 전문점. . 식전요리로 나오는 수란은 새콤한 소스가 곁들여져 입맛을 돋우며, 메인으로 나오는 사시미가 신선하다. 후토마키도 한입 가득 채우며 디저트까지 맛볼 수 있는 곳. ",
+                rating: 4.7,
+                situations: ["데이트" , "노키즈존"],
+                features: ["예약위주", "연중무휴"],
+                distance: 1.2,
+                reviewCount: 175
+            },
+            {
+                name: "리키하우스",
+                category: "기타",
+                image: "./img/con1_22.png",
+                description: "다람쥐 모형으로 포인트를 준 파이 전문 카페. 미트파이, 애플파이, 바나나크림파이 등 다양한 파이를 선보인다. 커피는 취향에 따라 원두를 선택할 수 있어 디저트와 함께 즐기기 좋다.",
+                rating: 4.8,
+                situations: ["반려견 동반" , "노키즈존"],
+                features: ["포장", "주차가능"],
+                distance: 0.8,
+                reviewCount: 197
+            },
+            {
+                name: "우탕",
+                category: "한식",
+                image: "./img/con1_24.png",
+                description: "소 갈비탕을 전문으로 하는 곳으로, 시그니처 메뉴인 얼큰갈비탕은 살이 푸짐하게 붙어 있는 큼직한 갈비뼈가 압도한다. 다른 곳에서는 보기 힘든 갈비수육도 추천.",
+                rating: 4.7,
+                situations: ["혼밥" , "아이동반"],
+                features: ["포장", "개별,단체좌석"],
+                distance: 2.8,
+                reviewCount: 350
+            },
+            {
+                name: "목동백년국수",
+                category: "한식",
+                image: "./img/con1_25.png",
+                description: "합리적인 가격으로 잔치국수와 수제비를 맛볼 수 있는 곳. 수제비는 맑은 육수와 얼큰한 육수 중 선택할 수 있다. 코다리 비빔국수와 비빔냉면도 추천 메뉴",
+                rating: 5.0,
+                situations: ["혼밥" , "아이동반"],
+                features: ["주차 불가", "영유아 의자"],
+                distance: 3.2,
+                reviewCount: 177
+            },
+        ];
+     // 전역 변수 (단일 선언)
+    let currentCategory = 'all';
+    let currentSituations = ['all'];
+    let filteredRestaurants = [...restaurants];
+
+    // URL 파라미터 체크
+    const hasUrlParams = (category && category !== 'all' && category !== '') || 
+                         (situations.length > 0 && situations[0] !== '' && situations[0] !== 'all');
+    
+    // URL 파라미터가 있으면 해당 값으로 설정
+    if (hasUrlParams) {
+        currentCategory = category || 'all';
+        currentSituations = situations.length > 0 ? situations : ['all'];
+    }
+
+    // 맛집 카드 생성 함수
+    function createRestaurantCard(restaurant) {
+        const stars = '★'.repeat(Math.floor(restaurant.rating)) + '☆'.repeat(5 - Math.floor(restaurant.rating));
+        
+        return `
+            <div class="restaurant-card" data-category="${restaurant.category}" data-situations="${restaurant.situations.join(',')}" data-rating="${restaurant.rating}" data-distance="${restaurant.distance}" data-reviews="${restaurant.reviewCount}">
+                <img src="${restaurant.image}" alt="${restaurant.name}">
+                <div class="card-content">
+                    <h1 class="eat_h">${restaurant.name}</h1>
+                    <h2 class="f_type">${restaurant.category}</h2>
+                    <span class="explanation">${restaurant.description}</span>
+                    <div class="rating">
+                        <span class="stars">${stars}</span>
+                        <em class="rating-number">${restaurant.rating}</em>
+                    </div>
+                    <ul class="btn">
+                        ${restaurant.situations.map(situation => `<li><a href="#">${situation}</a></li>`).join('')}
+                        ${restaurant.features.map(feature => `<li><a href="#">${feature}</a></li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+
+    // 맛집 목록 렌더링
+    function renderRestaurants(restaurants) {
+        const grid = document.getElementById('restaurant-grid');
+        const noResults = document.getElementById('no-results');
+        
+        if (restaurants.length === 0) {
+            grid.style.display = 'none';
+            noResults.style.display = 'block';
+        } else {
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+            grid.innerHTML = restaurants.map(createRestaurantCard).join('');
+        }
+        
+        document.getElementById('result-number').textContent = restaurants.length;
+    }
+
+    // 필터링 함수 (통합)
+    function filterRestaurants() {
+        filteredRestaurants = restaurants.filter(restaurant => {
+            // 카테고리 필터
+            const categoryMatch = currentCategory === 'all' || restaurant.category === currentCategory;
+            
+            // 상황 필터 (다중 선택 지원)
+            const situationMatch = currentSituations.includes('all') || 
+                                   currentSituations.some(situation => restaurant.situations.includes(situation));
+            
+            return categoryMatch && situationMatch;
+        });
+        
+        renderRestaurants(filteredRestaurants);
+    }
+
+    // 정렬 함수
+    function sortRestaurants(sortType) {
+        switch(sortType) {
+            case 'distance':
+                filteredRestaurants.sort((a, b) => a.distance - b.distance);
+                break;
+            case 'rating':
+                filteredRestaurants.sort((a, b) => b.rating - a.rating);
+                break;
+            case 'review':
+                filteredRestaurants.sort((a, b) => b.reviewCount - a.reviewCount);
+                break;
+            default:
+                filterRestaurants();
+                return;
+        }
+        renderRestaurants(filteredRestaurants);
+    }
+
+    // 초기 탭 상태 설정
+    function initializeTabs() {
+        // 모든 탭 초기화
+        document.querySelectorAll('.category a, .who a').forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // 카테고리 설정
+        if (category && category !== 'all' && category !== '') {
+            const targetCategory = document.querySelector(`.category a[data-category="${category}"]`);
+            if (targetCategory) {
+                targetCategory.classList.add('active');
+            }
+        } else if (!hasUrlParams) {
+            const allCategory = document.querySelector('.category a[data-category="all"]');
+            if (allCategory) {
+                allCategory.classList.add('active');
+            }
+        }
+
+        // 상황 설정
+        if (situations.length > 0 && situations[0] !== '' && situations[0] !== 'all') {
+            situations.forEach(situation => {
+                const targetSituation = document.querySelector(`.who a[data-situation="${situation}"]`);
+                if (targetSituation) {
+                    targetSituation.classList.add('active');
+                }
+            });
+        } else if (!hasUrlParams) {
+            const allSituation = document.querySelector('.who a[data-situation="all"]');
+            if (allSituation) {
+                allSituation.classList.add('active');
+            }
+        }
+
+        // 기본 정렬 활성화
+        const defaultSort = document.querySelector('[data-sort="default"]');
+        if (defaultSort) {
+            defaultSort.classList.add('active');
+        }
+    }
+
+    // 이벤트 리스너 등록 (단일)
+    function setupEventListeners() {
+        // 카테고리 클릭 이벤트
+        document.querySelectorAll('.category a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const clickedCategory = link.dataset.category;
+                
+                // 모든 카테고리에서 active 클래스 제거
+                document.querySelectorAll('.category a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // 클릭된 카테고리에 active 추가
+                link.classList.add('active');
+                currentCategory = clickedCategory;
+                
+                filterRestaurants();
+            });
+        });
+
+        // 상황 클릭 이벤트 (다중 선택)
+        document.querySelectorAll('.who a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const clickedSituation = link.dataset.situation;
+                
+                if (clickedSituation === 'all') {
+                    // "전체" 클릭 시
+                    document.querySelectorAll('.who a').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    link.classList.add('active');
+                    currentSituations = ['all'];
+                } else {
+                    // 전체가 선택되어 있다면 전체 해제
+                    if (currentSituations.includes('all')) {
+                        const allSituationLink = document.querySelector('.who a[data-situation="all"]');
+                        if (allSituationLink) {
+                            allSituationLink.classList.remove('active');
+                        }
+                        currentSituations = [];
+                    }
+                    
+                    // 토글 기능
+                    if (currentSituations.includes(clickedSituation)) {
+                        // 이미 선택된 경우 제거
+                        link.classList.remove('active');
+                        currentSituations = currentSituations.filter(s => s !== clickedSituation);
+                        
+                        // 아무것도 선택되지 않았다면 전체 선택
+                        if (currentSituations.length === 0) {
+                            const allSituationLink = document.querySelector('.who a[data-situation="all"]');
+                            if (allSituationLink) {
+                                allSituationLink.classList.add('active');
+                            }
+                            currentSituations = ['all'];
+                        }
+                    } else {
+                        // 선택되지 않은 경우 추가
+                        link.classList.add('active');
+                        currentSituations.push(clickedSituation);
+                    }
+                }
+                
+                console.log('현재 선택된 상황들:', currentSituations);
+                filterRestaurants();
+            });
+        });
+
+        // 정렬 클릭 이벤트
+        document.querySelectorAll('.order a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // 모든 정렬에서 active 클래스 제거
+                document.querySelectorAll('.order a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // 클릭된 정렬에 active 클래스 추가
+                link.classList.add('active');
+                
+                const sortType = link.dataset.sort;
+                sortRestaurants(sortType);
+            });
+        });
+    }
+
+    // 초기화 실행
+    initializeTabs();
+    setupEventListeners();
+    filterRestaurants();
+
+    // 전역 변수로 노출 (다른 스크립트에서 접근 가능하도록)
+    window.currentCategory = currentCategory;
+    window.currentSituations = currentSituations;
+    window.filterRestaurants = filterRestaurants;
+    window.sortRestaurants = sortRestaurants;
+});        
+
+
+    </script>
+</body>
+
+</html>

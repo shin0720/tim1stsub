@@ -1,0 +1,232 @@
+  @media screen and (max-width: 1450px) {
+    .container {
+    width: 100%;
+    }
+
+    #footer .f_logo img {
+    display: none;
+    }
+}
+/* 1260px */
+        @media screen and (max-width: 1260px) {
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                padding: 0 20px;
+            }
+        }
+
+        /* 1240px */
+        @media screen and (max-width: 1240px) {
+            .container {
+                max-width: 1100px;
+            }
+            #footer .f_asid .f_menu ul {
+                padding-left: 0;
+                justify-content: center;
+                padding: 20px;
+            }
+            
+            
+        }
+
+/* 1200px */
+  @media (max-width: 1200px) {
+     .container {
+        width: 95%;
+    }
+            
+    .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+}
+
+/* 1160px */
+  @media (max-width: 1160px) {
+    .content2 .who li a{
+        font-size: 1rem;
+    }
+  }
+
+  /* 1080px */
+    @media (max-width: 1080px) {
+    .content2 .who li a{
+        font-size: 0.8rem;
+    }
+  }
+
+ /* 960px */
+        @media screen and (max-width: 960px) {
+            .container {
+                max-width: 900px;
+                padding: 0 15px;
+            }
+            #footer {
+            height: 200px;
+            }
+            
+        }
+
+  /* 900px */
+    @media (max-width: 900px) {
+    .content2 .who li{
+        margin-right: 2px;
+    }
+    .content2 .who li a{
+        font-size: 0.8rem;
+    }
+  }
+
+  /* 850px */
+    @media (max-width: 850px) {
+    .content2 .who li{
+        margin-right: 1px;
+    }
+    .content2 .who li a{
+        font-size: 0.7rem;
+    }
+  }
+
+  /* 768px */
+   @media (max-width: 768px) {
+        .restaurant-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+    .content1 .category li{
+        height: auto;
+    }
+    .content2 .who li{
+        height:auto;
+    }
+    .content2 .who li a{
+        font-size: 1.1rem;
+    }
+    .content1 .category li:first-child{
+        margin-left: 0;
+    }
+    .content1 .category,
+    .content2 .who {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .content1 .category li,
+    .content2 .who li {
+        flex-basis: calc(50% - 10px);
+        margin-bottom: 10px;
+    }
+}
+
+/* 760px */
+        @media screen and (max-width: 760px) {
+            #header {
+                height: 80px;
+            }
+            
+            #header .logo img {
+                max-width: 150px;
+            }
+            
+            
+            #footer .f_asid span {
+            font-size: 11px;}
+            
+            #footer .f_asid .f_copy {
+                font-size: 10px;
+                
+            }
+        }
+
+/* 630px */
+@media screen and (max-width: 630px) {
+     #header {
+                height: 70px;
+            }
+            
+            #header .logo img {
+                max-width: 120px;
+                padding-top: 5px;
+            }
+                #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+        }
+
+/* 500px */
+    @media screen and (max-width: 500px) {
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+
+/* 480px */
+    @media screen and (max-width: 480px) {
+        #header {
+                height: 60px;
+            }
+            
+            #header .logo img {
+                max-width: 100px;
+            }
+            #footer .f_asid span {
+                font-size: 9px;
+            }
+            #footer .f_asid {
+                padding-bottom: 0;
+            }
+            
+        }
+/* 320px */
+    @media (max-width: 320px) {
+        .content1 .category li{
+            height: auto;
+        }
+        .content2 .who li{
+            height:auto;
+        }
+        .content2 .who li a{
+            font-size: 1rem;
+        }
+        .result-count{
+            font-size: 1.2rem;
+        }
+        .content3 .order li{
+            height: 30px;
+        }
+        .content3 .order li a{
+            font-size: 0.8rem;
+            line-height: 30px;
+    }
+    }

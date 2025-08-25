@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* 1450px */
+@media screen and (max-width: 1450px) {
+    body{
+  overflow-x: hidden;
+}
+    .container {
+        width: 100%;
+        padding: 0 30px;
+
+    }
+    .bannder .bannder-text {
+        font-size: 3vw;
+    }
+    .bannder-text > strong{
+        font-size: 5vw;
+    }
+    #footer .f_logo img {
+        display: none;
+    }
+}
+
+
+/* 1260px */
+@media screen and (max-width: 1240px) {
+  #footer .f_asid .f_menu ul {
+                padding-left: 0;
+                justify-content: center;
+                padding: 20px;
+            }
+
+
+
+
+}
+
+
+/* 960px */
+@media screen and (max-width: 960px) {
+  #footer {
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 890px) {
+    .coupon-boxes img{
+        max-width: 200px;
+    }
+    .content h2 {
+        font-size: 40px;
+    }
+
+    .coupon-boxes{gap: 50px;}
+    
+}
+
+
+@media screen and (max-width: 830px) {
+
+    .coupon-boxes img{
+        max-width: 200px;
+    }
+}
+
+/* 760px */
+@media screen and (max-width: 760px) {
+ #header {
+        height: 80px;
+    }
+
+    #header .logo {}
+
+    #header .logo img {
+        max-width: 150px;
+    }
+    .content {
+        padding: 40px;
+    }
+    .coupon-boxes img{
+        max-width: 200px;
+    }
+
+   
+
+    #footer .f_asid span {
+        font-size: 11px;
+    }
+
+    #footer .f_asid .f_copy {
+        font-size: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 700px) {}
+
+/* 630px */
+@media screen and (max-width: 630px) {
+    #footer .f_asid .f_menu {
+        display: none;
+    }
+
+    #footer .f_asid span {
+        font-size: 11px;
+        display: block;
+        border-right: none;
+        margin-bottom: 5px;
+        padding-right: 0;
+    }
+
+    #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+}
+
+@media screen and (max-width: 560px) {
+     .content h2 {
+        font-size: 25px;
+        /* white-space: nowrap; */
+    }
+    .sub-text{font-size: 16px;}
+    .coupon-boxes {gap: 20px;}
+    .content {padding: 20px;}
+}
+
+/* 500px */
+@media screen and (max-width: 500px) {
+      #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+    .content {padding: 10px;}
+ 
+.coupon-boxes{width: 100%;flex-wrap: wrap;flex-direction: column; justify-content: center; align-items: center;}
+.coupon-boxes img  {max-width: 100%;text-align: center; }
+
+ #footer .f_asid span {
+                font-size: 9px;
+            }
+            #footer .f_asid {
+                padding-bottom: 0;
+            }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .coupon-boxes img  {max-width: 90%;text-align: center; }
+}
+
+@media screen and (max-width: 360px) {
+     .coupon-boxes img  {max-width: 90%;text-align: center; }
+}

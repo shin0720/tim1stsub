@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+/* 기준*/
+@media screen and (max-width:1420px) {
+    body {overflow-x: hidden;}
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+}
+
+/* ~1410px */
+@media screen and (max-width:1410px) {
+    .intro_link .link_box{ width: 32%; }
+}
+
+/* ~1320px */
+@media screen and (max-width:1320px) {
+    .intro_link .br_1320{ display: block; }
+    .intro_link .link_box{ height: 410px; }
+}
+
+/* ~1280px*/
+@media screen and (max-width:1280px) {
+    #footer .f_logo img {
+       transform: translate(-50%, -75%);
+    }
+    #footer .f_asid .f_menu ul {
+        padding-left: 0;
+        justify-content: center;
+        padding: 20px;
+    }
+}
+
+/* ~ 1230px*/
+@media screen and (max-width:1230px) {    
+    .intro_banner h2{    
+        font-size: 38px;        
+    }
+    .intro_link .br_1200{ display: block; }
+    #footer .f_logo img {
+        width: 90%;
+        transform: translate(-70%, -80%);
+    }
+}
+
+/* ~ 1100px*/
+@media screen and (max-width:1100px) {    
+    .intro_banner{
+        height: 250px;    
+    }
+    .intro_banner .banner_textbox{ margin-left: 10px; }    
+    .intro_banner p{font-size: 22px;}
+    #footer .f_logo img {
+        width: 75%;
+        transform: translate(-90%, -90%);
+    }
+}
+
+/* ~ 1024px*/
+@media screen and (max-width:1024px) {
+    .intro_link .link_box{ height: 380px; }
+    .intro_link .link_box img{
+        height: 120px;
+        width: 96px;
+    }
+    #footer .f_logo img {
+        transform: translate(-100%, -90%);
+    }
+}
+
+/* ~ 970px*/
+@media screen and (max-width:970px) {
+    #footer .f_logo img { display: none; }
+    .intro_banner{
+        height: 250px;
+    }
+    .intro_banner .br_840{ display: block; }
+    .intro_banner h2{    
+        font-size: 36px;
+        padding-top: 35px;        
+    }
+    .intro_banner p{ font-size: 20px; }
+}
+
+/* ~ 840px*/
+@media screen and (max-width:840px) {    
+    .intro_banner{ 
+        height: 250px; 
+        background: url(../imgs/intro_banner_bg_840.png) center center;
+    }
+    .intro_link .link_box{ height: 310px; }
+    .intro_link .link_box img{
+        height: 95px;
+        width: 76px;
+    }
+    .intro_link .link_box h3{ font-size: 22px; }    
+    .intro_link .link_box p{ font-size: 15px; }
+    .intro_link .link_box a{
+        height: 35px;
+        width: 100px;
+        font-size: 14px;
+        padding: 8px;        
+    }
+}
+
+/* ~ 768px*/
+@media screen and (max-width:768px) {
+    #header { height: 100px; }
+    #header .logo img {
+        max-width: 150px;
+        padding-top: 8px;
+    }
+
+    .intro_banner{ 
+        height: 230px; 
+        background: url(../imgs/intro_banner_bg_768.png) center center;
+    }
+    .intro_banner h2{
+        font-size: 30px;         
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .intro_banner p{ font-size: 18px; }
+
+    .intro_capy h4{ font-size: 22px; }
+    .intro_capy p{ font-size: 16px; }
+
+    #footer { height: 200px; }
+    #footer .f_asid span { font-size: 11px; }
+    #footer .f_asid .f_copy { font-size: 10px; }
+
+}
+
+/* ~ 730px*/
+@media screen and (max-width:730px) {
+    .intro_banner .br_730{ display: block; }
+    .intro_banner h2{
+        font-size: 28px;         
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .intro_banner p{ font-size: 16px; }
+
+    .intro_link .link_box{ height: 280px; }
+    .intro_link .link_box img{
+        height: 82px;
+        width: 66px;
+    }
+    .intro_link .link_box h3{ font-size: 20px; }    
+    .intro_link .link_box p{ font-size: 13px; }
+    .intro_link .link_box a{
+        height: 30px;
+        width: 80px;
+        font-size: 13px;
+        padding: 6px;        
+    }
+}
+
+/* ~ 630px*/
+@media screen and (max-width:630px) {
+    .intro_link{ 
+        flex-direction: column; 
+        margin: 25px 0;
+    }
+    .intro_link .br_630{ display: none; }
+
+    .intro_link .link_box{
+        width: 100%;
+        height: 130px;
+        border-radius: 15px;        
+        margin-bottom: 15px;
+        padding: 15px 15px;
+        position: relative;
+    }
+    .intro_link .link_box img{        
+        height: 87px;
+        width: 70px;
+        margin-right: 15px;
+        position: absolute;
+        left: 20px;
+    }
+    .intro_link .link_box h3{
+        font-size: 22px; 
+        padding-top: 10px;
+        position: absolute;
+        top: 20px;
+        left: 130px;
+    }
+    .intro_link .link_box p{
+        font-size: 15px;
+        /* float: left; */
+        position: absolute;
+        top: 50px;
+        left: 100px;
+    }
+    
+    .intro_link .link_box a{
+        height: 80px;
+        width: 8%;
+        padding-top: 22px; 
+        border-radius: 10px;
+        font-size: 13px;
+        float: left;
+        position: absolute;
+        right: 15px;
+        bottom: 22px;
+    }
+    .intro_capy .br_630{ display: block; }
+}
+
+@media screen and (max-width:560px) {
+    .intro_link .link_box img{        
+        height: 78px;
+        width: 63px;
+        margin-right: 0;
+        
+    }
+    .intro_link .link_box {
+        position: relative;
+    }
+    .intro_link .link_box h3 {
+        position: absolute;
+        top: 20px;
+        left: 115px;
+    }
+    .intro_link .link_box p{
+        /* padding: 12px 0; */
+        position: absolute;
+        top: 60px;
+        left: 115px;
+        font-size: 14px;
+    }    
+    .intro_link .link_box a{
+        height: 24px;
+        width: 70px;
+        padding: 3px;
+        left: 12px;
+        bottom: 20px;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width:500px) {    
+    .intro_banner{ 
+        height: 200px;
+        background: url(../imgs/intro_banner_bg_500.png) center center;
+    }
+    .intro_banner h2{
+        font-size: 20px;         
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
+    .intro_banner p{ font-size: 12px; }
+
+    .intro_link .br_320{ display: none; }
+    .intro_link .link_box{
+        height: 110px;}
+    .intro_link .link_box img{        
+        height: 70px;
+        width: 56px;
+    }
+    .intro_link .link_box h3{
+        font-size: 16px; 
+        top: 10px;
+    }
+    .intro_link .link_box p{
+        font-size: 10px;
+        top: 35px;
+        left: 100px;
+    }    
+    .intro_link .link_box a{
+        height: 20px;
+        width: 60px;
+        font-size: 10px;
+        left: 18px;
+        bottom: 10px;
+    }
+        .intro_capy h4 {
+        font-size: 15px;
+    }
+    .intro_capy p {
+        font-size: 12px;
+    }
+    #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+}
+
+/* ~ 420px*/
+@media screen and (max-width:420px) {
+    .intro_link .link_box img{        
+        height: 58px;
+        width: 46px;        
+    }
+    .intro_link .link_box h3{
+    
+    }
+    .intro_link .link_box p{
+        /* font-size: 12px;
+        float: left;
+        text-align: left;
+        padding: 8px 0; */
+    }
+    .intro_link .link_box a{
+        /* height: 20px;
+        width: 54px;
+        font-size: 10px;
+        left: 10px;
+        bottom: 18px; */
+    }
+}
+
+/* ~ 400px*/
+@media screen and (max-width:400px) {
+    .intro_banner h2{
+        font-size: 20px;         
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
+    .intro_banner p{ font-size: 12px; }
+
+    .intro_link .br_400{ display: block; }
+
+    .intro_link{ margin: 20px 0; }
+        .intro_link .link_box a {
+            left: 12px;
+        }
+
+        .intro_link .link_box h3 {
+            left: 90px;
+            font-size: 14px;
+        }
+        .intro_link .link_box p {
+            left: 118px;
+        }
+
+    .intro_capy h4{ font-size: 15px; }
+    .intro_capy p{ font-size: 12px; }
+     #footer .f_asid span {
+                font-size: 9px;
+            }
+            #footer .f_asid {
+                padding-bottom: 0;
+            }
+}
+
+/* ~320px */
+@media screen and (max-width:320px) {    
+    .intro_banner{ 
+        height: 200px;
+        background: url(../imgs/intro_banner_bg_320.png) center center;
+    }
+    .intro_link .link_box img{        
+        margin: 0 10px 0 0;
+    }
+    .intro_link .link_box h3{
+        font-size: 14px;
+    }
+    .intro_link .link_box a{
+        left: 8px;
+    }
+}

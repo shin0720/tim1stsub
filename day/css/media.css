@@ -1,0 +1,2114 @@
+  @media screen and (max-width: 1450px) {
+    .container {
+    width: 100%;
+    }
+    .dayfood .day_food .gal img{
+        width: 100%;
+    }
+    #footer .f_logo img {
+    display: none;
+    }
+}
+
+@media screen and (max-width: 1360px){
+    .container{width: 100%;}
+    .dayfood .day {
+            width: 78%;
+            height: 40px;
+            margin-left: 10%;
+            position: relative;
+            bottom:20px;
+            
+        }
+    .dayfood .day ul li {
+            width: 13.9%;
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            flex: 1;
+            background-color: #FADFC6;
+            font-family: 'S-CoreDream-3 Light';
+            margin-right: 3px;
+
+        }
+    .dayfood .day_food {
+            width: 75%;   
+            margin-left: 11%;
+            
+            
+        }
+}
+
+
+@media screen and (max-width: 1354px){
+    .container{width: 100%;}
+    .dayfood .day {
+            width: 78%;
+            height: 40px;
+            margin-left: 10%;
+    }
+    .dayfood .day ul li {
+            width: 13.9%;
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            flex: 1;
+            background-color: #FADFC6;
+            font-family: 'S-CoreDream-3 Light';
+            margin-right: 3px;
+
+        }
+    .dayfood .day_food {
+            width: 75%;   
+            margin-left: 11%;
+            
+        }
+        .dayfood .day_food .gal img{
+        width: 498px;
+        height: 298px;
+        object-fit: cover;
+       }
+
+       .dayfood .day_food .notice{
+        float: left;
+        width: 498px;
+        height: 298px;
+        text-align: left;
+        padding: 70px 20px;
+        position: relative;
+       } 
+}
+
+
+@media screen and (max-width: 1346px){
+    .container {
+                width: 100%;
+                max-width: 1200px;
+                padding: 0 20px;
+            }
+    .dayfood .text {
+            width: 100%;
+            height: 100%;
+            /* background-color: lightcoral; */
+            margin-top: 120px;
+            font-size: 30px;
+            /* font-family: 'S-CoreDream-3 Light'; */
+            color: #3b3838;
+            margin-bottom: 50px;
+            font-family: "GT-Flexa";
+            text-shadow: 0 0.05em 0 #f09c83, 0 0.1em 0.1em rgba(70, 0, 35, 0.3),
+                0 0.4em 0.3em rgba(70, 0, 35, 0.1);
+
+        }
+
+    .dayfood .day {
+            width: 78%;
+            height: 40px;
+            margin-left: 10%;
+            margin-top: -2%;
+            /* background-color: aqua; */
+            
+            
+    }
+    .dayfood .day ul li {
+            width: 13.9%;
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            flex: 1;
+            background-color: #FADFC6;
+            font-family: 'S-CoreDream-3 Light';
+            margin-right: 3px;
+
+        }
+    .dayfood .day_food {
+            width: 74%;   
+            margin-left: 12%;
+            position: relative;
+            bottom: 1px;
+        }
+    .dayfood .day_food .gal img{
+        width: 428px;
+        height: 298px;
+        object-fit: cover;
+        
+       }
+
+       .dayfood .day_food .notice{
+        float: left;
+        width: 428px;
+        height: 298px;
+        text-align: left;
+        padding: 70px 20px;
+        position: relative;
+       }  
+    
+}
+/* 1346px */
+
+@media screen and (max-width: 1346px){
+    .container {
+                width: 100%;
+                max-width: 1200px;
+                padding: 0 20px;
+            }
+    .dayfood .text {
+            width: 100%;
+            height: 100%;
+            /* background-color: lightcoral; */
+            margin-top: 112px;
+            font-size: 28px;
+            /* font-family: 'S-CoreDream-3 Light'; */
+            color: #3b3838;
+            margin-bottom: 50px;
+            font-family: "GT-Flexa";
+            text-shadow: 0 0.05em 0 #f09c83, 0 0.1em 0.1em rgba(70, 0, 35, 0.3),
+                0 0.4em 0.3em rgba(70, 0, 35, 0.1);
+
+        }
+
+    .dayfood .day {
+            width: 78%;
+            height: 40px;
+            margin-left: 10%;
+            margin-top: -2%;
+            /* background-color: aqua; */
+            
+            
+    }
+    .dayfood .day ul li {
+            width: 13.9%;
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            flex: 1;
+            background-color: #FADFC6;
+            font-family: 'S-CoreDream-3 Light';
+            margin-right: 3px;
+
+        }
+    .dayfood .day_food {
+            width: 74%;   
+            margin-left: 12%;
+            position: relative;
+            bottom: 1px;
+        }
+    .dayfood .day_food .gal img{
+        width: 429px;
+        height: 298px;
+        object-fit: cover;
+        
+       }
+
+    .dayfood .day_food .notice img{
+        width: 42px;
+        height: 42px;
+        display: block;
+        /* background-color: red; */
+        margin-top: 29px;
+    }
+
+       .dayfood .day_food .notice{
+        float: left;
+        width: 428px;
+        height: 298px;
+        text-align: left;
+        padding: 70px 20px;
+        position: relative;
+       } 
+       .dayfood .day_food .notice strong{
+        font-size: 35px;
+        display: block;
+       }
+       .dayfood .day_food .notice span{
+        font-size: 18px;
+        display: inline-block;
+        /* padding-top: 20px; */
+       }
+
+}
+/* 1260px */
+        @media screen and (max-width: 1260px) {
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                padding: 0 20px;
+            }
+        }
+
+        /* 1240px */
+        @media screen and (max-width: 1240px) {
+            .container {
+                max-width: 1100px;
+            }
+            .dayfood .text {
+            width: 100%;
+            height: 100%;
+            /* background-color: lightcoral; */
+            margin-top: 112px;
+            font-size: 25px;
+            /* font-family: 'S-CoreDream-3 Light'; */
+            color: #3b3838;
+            margin-bottom: 50px;
+            font-family: "GT-Flexa";
+            text-shadow: 0 0.05em 0 #f09c83, 0 0.1em 0.1em rgba(70, 0, 35, 0.3),
+                0 0.4em 0.3em rgba(70, 0, 35, 0.1);
+
+        }
+            #footer .f_asid .f_menu ul {
+                padding-left: 0;
+                justify-content: center;
+                padding: 20px;
+            }
+            .dayfood .day_food {
+                width: 74%;   
+                margin-left: 12%;
+                position: relative;
+                bottom: 1px;
+            }
+            .dayfood .day_food .gal img{
+                width: 370px;
+                height: 280px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 414px;
+                height: 280px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+                
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 35px;
+                display: block;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 17px;
+                display: inline-block;
+                /* padding-top: 20px; */
+            }
+            .dayfood .day_food .notice img{
+                width: 42px;
+                height: 42px;
+                display: block;
+                /* background-color: red; */
+                margin-top: 20px;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 25px;
+                position: absolute;
+                bottom: 60px;
+                left: 80px;
+            }
+            
+        }
+
+/* 1200px */
+  @media (max-width: 1200px) {
+     .container {
+        width: 95%;
+    }
+}
+
+/* 1172px */
+@media (max-width: 1172px){
+    
+    .dayfood .day_food {
+                width: 75%;   
+                margin-left: 12%;
+                position: relative;
+                bottom: 1px;
+                
+            }
+            .dayfood .day_food .gal img{
+                width: 372px;
+                height: 280px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 421px;
+                height: 280px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 35px;
+                display: block;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 18px;
+                display: inline-block;
+                /* padding-top: 20px; */
+            }
+            .dayfood .day_food .notice img{
+                width: 42px;
+                height: 42px;
+                display: block;
+                /* background-color: red; */
+                margin-top: 20px;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 25px;
+                position: absolute;
+                bottom: 61px;
+                left: 80px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+                width: 120px;
+                height: 50px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+}
+
+
+/* 1170px */
+@media (max-width: 1170px){
+    .dayfood .day_food {
+                width: 65%;   
+                margin-left: 16%;
+                position: relative;
+                bottom: 1px;
+                /* background-color: #f09c83; */
+                
+            }
+            .dayfood .day_food .gal img{
+                width: 315px;
+                height: 247px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 349px;
+                height: 247px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 25px;
+                display: block;
+                margin-top: -28px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 14px;
+                display: inline-block;
+                /* padding-top: 20px; */
+            }
+            .dayfood .day_food .notice img{
+                width: 42px;
+                height: 42px;
+                display: block;
+                /* background-color: red; */
+                margin-top: 22px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 5px;
+                right: 0;
+                width: 126px;
+                height: 55px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 25px;
+                position: absolute;
+                bottom: 69px;
+                left: 80px;
+            }
+}
+/* 1160px */
+@media (max-width: 1160px) {}
+/* 1132px */
+@media (max-width: 1132px){
+    .dayfood .day_food {
+                width: 65%;   
+                margin-left: 16%;
+                position: relative;
+                bottom: 1px;
+                /* background-color: #f09c83; */
+                
+            }
+            .dayfood .day_food .gal img{
+                width: 299px;
+                height: 244px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 349px;
+                height: 244px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 25px;
+                display: block;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 14px;
+                display: inline-block;
+                /* padding-top: 20px; */
+            }
+
+}
+
+/* 1106px */
+@media (max-width: 1106px){
+    .dayfood .day_food {
+                width: 65%;   
+                margin-left: 16%;
+                position: relative;
+                bottom: 1px;
+                /* background-color: #f09c83; */
+                
+            }
+            .dayfood .day_food .gal img{
+                width: 290px;
+                height: 242px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 349px;
+                height: 242px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 25px;
+                display: block;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 14px;
+                display: inline-block;
+                /* padding-top: 20px; */
+            }
+
+}
+
+
+@media (max-width: 1103px){
+    .container{
+        width: 90%;
+    }
+
+    .dayfood .day {
+            width: 95%;
+            height: 40px;
+            margin-left: 8%;
+            margin-top: -2%;
+            /* background-color: aqua; */
+            
+            
+    }
+    .dayfood .day ul li {
+            width: 12%;
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            flex: 1;
+            background-color: #FADFC6;
+            font-family: 'S-CoreDream-3 Light';
+            margin-right: 3px;
+
+        }
+    .dayfood .day_food .gal img{
+                width: 290px;
+                height: 237px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 297px;
+                height: 237px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 23px;
+                display: block;
+                margin-top: -33px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 12px;
+                display: inline-block;
+                /* padding-top: 20px; */
+                margin-top: -4px;
+            }
+            .dayfood .day_food .notice img{
+                width: 35px;
+                height: 35px;
+                display: block;
+                margin-top: 14px;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 23px;
+                position: absolute;
+                bottom: 88px;
+                left: 64px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+                width: 126px;
+                height: 55px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }    
+}
+  
+  /* 1020px */
+    @media (max-width: 1062px) {
+        .dayfood .day_food {
+            width: 70%;   
+            margin-left: 20%;
+            /* background-color: #f09c83; */
+        }
+                
+    .dayfood .day_food .gal img{
+                width: 261px;
+                height: 220px;
+                object-fit: cover;
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 262px;
+                height: 220px;
+                text-align: left;
+                padding: 70px 20px;
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 20px;
+                display: block;
+                margin-top: -52px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 10px;
+                display: inline-block;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 21px;
+                position: absolute;
+                bottom: 94px;
+                left: 58px;
+            }
+            .dayfood .day_food .notice img{
+                width: 30px;
+                height: 30px;
+                display: block;
+                /* background-color: red; */
+                margin-top: 20px;
+            }
+  }
+  
+ /* 960px */
+        @media screen and (max-width: 960px) {
+            .container {
+                max-width: 900px;
+                padding: 0 15px;
+            }
+            
+            #footer {
+            height: 200px;
+            }
+            
+        }
+        @media screen and (max-width: 944px) {
+            .container {
+                max-width: 900px;
+                padding: 0 15px;
+            }
+            .dayfood .day_food .gal img{
+                width: 224px;
+                height: 190px;
+                object-fit: cover;
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 262px;
+                height: 200px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 19px;
+                /* display: block; */
+               
+                position: relative;
+                bottom: 11px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 10px;
+                display: inline-block;
+                position: relative;
+                bottom: 16px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                font-size: 21px;
+                position: absolute;
+                bottom: 101px;
+                left: 55px;
+            }
+            .dayfood .day_food .notice img{
+                width: 30px;
+                height: 30px;
+                display: block;
+                /* background-color: red; */
+                margin-top: -4px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+                width: 114px;
+                height: 48px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+        }
+
+  /* 900px */
+    @media (max-width: 900px) {
+    
+  }
+  @media screen and (max-width: 880px){
+    .container {
+                max-width: 900px;
+                padding: 0 15px;
+            }
+            .dayfood .day_food .gal img{
+                width: 204px;
+                height: 175px;
+                object-fit: cover;
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 250px;
+                height: 175px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 13px;
+                /* display: block; */
+                margin-top: 20px;
+               
+                position: relative;
+                bottom: 66px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 10px;
+                display: inline-block;
+                position: relative;
+                bottom: 75px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 18px;
+                position: absolute;
+                bottom: 76px;
+                left: 52px;
+            }
+            .dayfood .day_food .notice img{
+                width: 29px;
+                height: 29px;
+                display: block;
+                /* background-color: red; */
+                margin-top: -65px;
+            }
+  }
+  /* 850px */
+    @media (max-width: 850px) {
+    
+  }
+  @media screen and (max-width: 826px){
+    
+            .dayfood .day_food .gal img{
+                width: 187px;
+                height: 170px;
+                object-fit: cover;
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 247px;
+                height: 170px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 13px;
+                /* display: block; */
+               
+                position: relative;
+                bottom: 68px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 9px;
+                display: inline-block;
+                position: relative;
+                bottom: 78px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 16px;
+                position: absolute;
+                bottom: 77px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 26px;
+                height: 26px;
+                display: block;
+                /* background-color: red; */
+                margin-top: -69px;
+            }
+  }
+
+  /*790px*/
+    @media (max-width: 790px){
+        .dayfood .day_food {
+            width: 70%;   
+            margin-left: 15%;
+            /* background-color: #f09c83; */
+        }
+        .dayfood .day_food .gal img{
+                width: 169px;
+                height: 153px;
+                object-fit: cover;
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 247px;
+                height: 153px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 13px;
+                /* display: block; */
+               
+                position: relative;
+                bottom: 68px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 9px;
+                display: inline-block;
+                position: relative;
+                bottom: 78px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 16px;
+                position: absolute;
+                bottom: 61px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 26px;
+                height: 26px;
+                display: block;
+                /* background-color: red; */
+                margin-top: -69px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 50px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+        }
+    
+  /* 768px */
+   @media (max-width: 768px) {
+}
+
+/* 760px */
+        @media screen and (max-width: 760px) {
+            .dayfood .day_food {
+            width: 70%;   
+            margin-left: 15%;
+            /* background-color: #f09c83; */
+        }
+            .dayfood .day_food .gal img{
+                width: 169px;
+                height: 139px;
+                object-fit: cover;
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 232px;
+                height: 139px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+    
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 13px;
+                /* display: block; */
+               
+                position: relative;
+                
+            }
+            .dayfood .day_food .notice span{
+                font-size: 9px;
+                display: inline-block;
+                position: relative;
+                bottom: 78px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 16px;
+                position: absolute;
+                bottom: 48px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 26px;
+                height: 26px;
+                display: block;
+                /* background-color: red; */
+                margin-top: -69px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+        }
+
+@media screen and (max-width: 684px) {
+    .dayfood .day_food .gal img{
+                width: 189px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 50%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 10px;
+                position: relative;
+                bottom: 70px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 11px;
+                position: relative;
+                bottom: 76px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 14px;
+                position: absolute;
+                bottom: 37px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 26px;
+                height: 26px;
+                display: block;
+                /* background-color: red; */
+                margin-top: -69px;
+            }
+            
+                .dayfood .day_food .notice button {
+                    
+                    width: 108px;
+                    height: 25px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    background-color: #FADFC6;
+                    border: 1px solid black;
+                    font-family: 'S-CoreDream-3 Light';
+    
+            
+            }
+
+                #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+        }
+
+@media screen and (max-width: 667px){
+    
+}
+/* 630px */
+@media screen and (max-width: 648px) {
+    .dayfood .day_food .gal img{
+                width: 189px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 49%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 11px;
+                /* display: block; */
+                position: relative;
+                bottom: 70px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 11px;
+                display: inline-block;
+                position: relative;
+                bottom: 81px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 13px;
+                position: absolute;
+                bottom: 42px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 23px;
+                height: 23px;
+                /* display: block; */
+                /* background-color: red; */
+                margin-top: -74px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+                #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+
+                #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+        }
+
+@media screen and (max-width: 636px) {
+    .dayfood .day_food .gal img{
+                width: 189px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 44%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            } 
+            .dayfood .day_food .notice strong{
+                font-size: 10px;
+                /* display: block; */
+                position: relative;
+                bottom: 70px;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 10px;
+                display: inline-block;
+                position: relative;
+                bottom: 83px;
+                /* background-color: #f09c83; */
+            }
+                .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 13px;
+                position: absolute;
+                bottom: 50px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 21px;
+                height: 21px;
+                /* display: block; */
+                /* background-color: red; */
+                margin-top: -78px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+                #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+
+                #footer .f_asid .f_menu{
+                display: none;
+            }
+            
+            #footer .f_asid span {
+                font-size: 11px;
+                display: block;
+                border-right: none;
+                margin-bottom: 5px;
+                padding-right: 0;
+            }
+            #footer .f_asid br.none{
+                display: none;
+            }
+            #footer .f_asid .f_copy span{
+                font-size: 9px;
+                display: inline;
+            }
+            #footer .f_asid .f_copy{
+                margin-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer .f_asid .f_cont{
+            padding: 20px;
+            }
+        }
+@media screen and (max-width: 609px){
+    .dayfood .day_food .notice span{
+                font-size: 9px;
+                display: inline-block;
+                position: relative;
+                bottom: 82px;
+                /* background-color: #f09c83; */
+            }
+                    .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 13px;
+                position: absolute;
+                bottom: 50px;
+                left: 49px;
+            }
+            .dayfood .day_food .notice img{
+                width: 21px;
+                height: 21px;
+                /* display: block; */
+                /* background-color: red; */
+                margin-top: -78px;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+}
+@media screen and (max-width: 584px){
+    .dayfood .day_food .gal img{
+                width: 188px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 44%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+}
+@media screen and (max-width: 581px){
+    .dayfood .day_food .gal img{
+                width: 185px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 44%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            } 
+}
+@media screen and (max-width: 572px){
+    
+    
+    .dayfood .day_food .gal img{
+                width: 180px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 44%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 12px;
+                position: absolute;
+                bottom: 53px;
+                left: 49px;
+            }
+    
+}
+@media screen and (max-width: 558px){
+    .dayfood .day_food .gal img{
+                width: 160px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 48%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 12px;
+                position: absolute;
+                bottom: 52px;
+                left: 49px;
+            }
+    
+}
+@media screen and (max-width: 540px){
+    .dayfood .day_food .notice strong {
+        font-size: 9px;
+        /* display: block; */
+        position: relative;
+        bottom: 70px;
+    }
+    
+    .dayfood .day_food .gal img{
+                width: 156px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+    .dayfood .day_food .notice span{
+                font-size: 8px;
+                display: inline-block;
+                position: relative;
+                bottom: 80px;
+                /* background-color: #f09c83; */
+            }
+
+            .dayfood .day_food .notice{
+                float: left;
+                width: 46%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 12px;
+                position: absolute;
+                bottom: 58px;
+                left: 46px;
+            }
+    
+}
+@media screen and (max-width: 513px){
+    .dayfood .day_food .gal img{
+                width: 144px;
+                height: 140px;
+                object-fit: cover;
+        
+            }
+            .dayfood .day_food .notice strong{
+                font-size: 9px;
+                display: block;
+            }
+            .dayfood .day_food .notice span{
+                font-size: 8px;
+                display: inline-block;
+                position: relative;
+                bottom: 80px;
+                /* background-color: #f09c83; */
+            }
+            .dayfood .day_food .notice{
+                float: left;
+                width: 47%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice p{
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 10px;
+                position: absolute;
+                bottom: 58px;
+                left: 49px;
+            }
+    
+}
+
+/* 500px */
+    @media screen and (max-width: 499px) {
+        .dayfood .day_food .gal img {
+        width: 144px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 9px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 48%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+
+
+@media screen and (max-width: 505px){
+    
+}
+ @media screen and (max-width: 487px) {
+        .dayfood .day_food .gal img {
+        width: 137px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 48%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+ @media screen and (max-width: 466px) {
+        .dayfood .day_food .gal img {
+        width: 135px;
+        height: 140px;
+        object-fit: cover;
+    }
+    .dayfood .day_food .notice span {
+        font-size: 7px;
+        display: inline-block;
+        position: relative;
+        bottom: 80px;
+        /* background-color: #f09c83; */
+    }
+    .dayfood .day_food .notice p {
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 10px;
+                position: absolute;
+                bottom: 61px;
+                left: 45px;
+            }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 48%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+        .dayfood .day_food .gal img {
+        width: 119px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 50%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+         @media screen and (max-width: 446px) {
+        .dayfood .day_food .gal img {
+        width: 115px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 51%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice span {
+                font-size: 7px;
+                display: inline-block;
+                position: relative;
+                bottom: 80px;
+                /* background-color: #f09c83; */
+            }
+            .dayfood .day_food .notice p {
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 10px;
+                position: absolute;
+                bottom: 61px;
+                left: 45px;
+            }
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+         @media screen and (max-width: 432px) {
+        .dayfood .day_food .gal img {
+        width: 106px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 52%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+        @media screen and (max-width: 429px) {
+        .dayfood .day_food .gal img {
+        width: 100px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 53%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+        @media screen and (max-width: 420px) {
+        .dayfood .day_food .gal img {
+        width: 95px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 54%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+         @media screen and (max-width: 412px) {
+        .dayfood .day_food .gal img {
+        width: 87px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 55%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+        @media screen and (max-width: 407px) {
+        .dayfood .day_food .gal img {
+        width: 84px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 56%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+         @media screen and (max-width: 402px) {
+        .dayfood .day_food .gal img {
+        width: 82px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 8px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 58%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice button{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #FADFC6;
+                border: 1px solid black;
+                font-family: 'S-CoreDream-3 Light';
+            }
+
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+/* 480px */
+    @media screen and (max-width: 480px) {
+            #footer .f_asid span {
+                font-size: 9px;
+            }
+            #footer .f_asid {
+                padding-bottom: 0;
+            }
+            
+        }
+    @media screen and (max-width: 459px){
+        
+    }
+    @media screen and (max-width: 393px) {
+        .dayfood .day_food .gal img {
+        width: 82px;
+        height: 140px;
+        object-fit: cover;
+    }
+        .dayfood .day_food .notice span {
+        font-size: 7px;
+        display: inline-block;
+        position: relative;
+        bottom: 80px;
+        /* background-color: #f09c83; */
+    }
+
+    .dayfood .day_food .notice strong{
+                font-size: 7px;
+                display: block;
+            }
+        .dayfood .day_food .notice{
+                float: left;
+                width: 57%;
+                height: 130px;
+                text-align: left;
+                /* padding: 70px 20px; */
+                position: relative;
+                /* background-color: aqua; */
+                overflow: hidden;
+            }
+            .dayfood .day_food .notice button{
+                    position: absolute;
+                    bottom: 10px;
+                    right: 0;
+                    width: 110px;
+                    height: 28px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    background-color: #FADFC6;
+                    border: 1px solid black;
+                    font-family: 'S-CoreDream-3 Light';
+            }
+            .dayfood .day_food .notice p {
+                display: inline-block;
+                /* background-color: #fce2d1; */
+                font-size: 10px;
+                position: absolute;
+                bottom: 61px;
+                left: 44px;
+            }
+
+
+            #footer .f_logo img {
+                width: 120px;
+                height: 60px;
+            }
+            
+            #footer .f_asid .f_menu ul>li>a {
+                font-size: 12px;
+            }
+            
+            #footer .f_asid span {
+                font-size: 10px;
+            }
+        }
+    @media (max-width: 358px){
+        
+    }
+    @media (max-width: 326px){
+        
+    }
+    
+/* 320px */
+    @media (max-width: 366px) {
+            .dayfood .day_food .notice {
+        float: left;
+        width: 57%;
+        height: 130px;
+        text-align: left;
+        /* padding: 70px 20px; */
+        position: relative;
+        /* background-color: aqua; */
+        overflow: hidden;
+    }
+
+    .dayfood .day_food .notice span {
+        font-size: 6px;
+        display: inline-block;
+        position: relative;
+        bottom: 80px;
+        /* background-color: #f09c83; */
+    }
+        .dayfood .day_food .notice img {
+        width: 15px;
+        height: 15px;
+        /* display: block; */
+        /* background-color: red; */
+        margin-top: -72px;
+    }
+    .dayfood .day_food .notice p {
+        display: inline-block;
+        /* background-color: #fce2d1; */
+        font-size: 10px;
+        position: absolute;
+        bottom: 61px;
+        left: 36px;
+    }
+    }
